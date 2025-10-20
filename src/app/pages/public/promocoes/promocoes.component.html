@@ -1,0 +1,600 @@
+ <!-- Breadcrumb -->
+  <section class="bg-gray-100 py-4">
+    <div class="container mx-auto px-4">
+      <nav class="flex" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+          <li class="inline-flex items-center">
+            <a routerLink="/" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary">
+              <i class="fas fa-home mr-2"></i>
+              Início
+            </a>
+          </li>
+          <li aria-current="page">
+            <div class="flex items-center">
+              <i class="fas fa-chevron-right text-gray-400 mx-2"></i>
+              <span class="ml-1 text-sm font-medium text-gray-500 md:ml-2">Promoções</span>
+            </div>
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Banner Principal de Promoções -->
+  <section class="flash-sale text-white py-12">
+    <div class="container mx-auto px-4 text-center">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-red-600 inline-block px-4 py-1 rounded-full mb-4 animate-pulse-glow">
+          <span class="font-bold"><i class="fas fa-bolt mr-2"></i>PROMOÇÃO RELÂMPAGO</span>
+        </div>
+        <h1 class="font-playfair text-4xl md:text-5xl font-bold mb-4">Ofertas Especiais</h1>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">Descontos incríveis em relógios e perfumes de luxo. Aproveite enquanto durarem os estoques!</p>
+        
+        <!-- Contador Regressivo -->
+        <div class="countdown-timer inline-flex items-center space-x-4 p-4 rounded-2xl mb-8">
+          <div class="text-center">
+            <div class="text-3xl font-bold">02</div>
+            <div class="text-sm">Dias</div>
+          </div>
+          <div class="text-2xl">:</div>
+          <div class="text-center">
+            <div class="text-3xl font-bold">14</div>
+            <div class="text-sm">Horas</div>
+          </div>
+          <div class="text-2xl">:</div>
+          <div class="text-center">
+            <div class="text-3xl font-bold">38</div>
+            <div class="text-sm">Minutos</div>
+          </div>
+          <div class="text-2xl">:</div>
+          <div class="text-center">
+            <div class="text-3xl font-bold">22</div>
+            <div class="text-sm">Segundos</div>
+          </div>
+        </div>
+        
+        <a href="#ofertas" class="bg-white hover:bg-gray-100 text-red-600 font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg inline-flex items-center">
+          <span>VER OFERTAS</span>
+          <i class="fas fa-arrow-down ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filtros de Promoções -->
+  <section class="py-8 bg-white border-b">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center">
+        <div class="mb-4 lg:mb-0">
+          <h2 class="text-xl font-bold text-dark">Filtrar Promoções</h2>
+          <p class="text-text-secondary">Encontre as melhores ofertas para você</p>
+        </div>
+        
+        <div class="flex flex-wrap gap-4">
+          <!-- Filtro por Categoria -->
+          <div class="relative">
+            <select class="bg-white border border-gray-300 text-dark py-2 pl-4 pr-10 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-primary">
+              <option>Todas as Categorias</option>
+              <option>Relógios</option>
+              <option>Perfumes</option>
+              <option>Acessórios</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          
+          <!-- Filtro por Desconto -->
+          <div class="relative">
+            <select class="bg-white border border-gray-300 text-dark py-2 pl-4 pr-10 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-primary">
+              <option>Qualquer Desconto</option>
+              <option>Até 20% OFF</option>
+              <option>21% - 40% OFF</option>
+              <option>Acima de 40% OFF</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          
+          <!-- Filtro por Tipo de Oferta -->
+          <div class="relative">
+            <select class="bg-white border border-gray-300 text-dark py-2 pl-4 pr-10 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-primary">
+              <option>Tipo de Oferta</option>
+              <option>Promoção Relâmpago</option>
+              <option>Oferta da Semana</option>
+              <option>Liquidação</option>
+              <option>Combo Especial</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          
+          <!-- Botão Limpar Filtros -->
+          <button class="bg-gray-200 hover:bg-gray-300 text-dark py-2 px-4 rounded-lg transition-colors duration-300">
+            <i class="fas fa-times mr-2"></i>
+            Limpar
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destaques de Promoções -->
+  <section class="py-8 bg-red-50">
+    <div class="container mx-auto px-4">
+      <h2 class="font-playfair text-3xl font-bold text-dark text-center mb-2">Destaques da Semana</h2>
+      <p class="text-text-secondary text-center mb-8 max-w-2xl mx-auto">As ofertas mais procuradas pelos nossos clientes</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Destaque 1 -->
+        <div class="bg-white rounded-2xl p-6 text-center shadow-lg border-2 border-red-200 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+          <div class="sale-badge inline-block px-3 py-1 rounded-full text-white text-sm font-bold mb-4">
+            <i class="fas fa-crown mr-2"></i>MAIS VENDIDO
+          </div>
+          <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-fire text-2xl text-red-600"></i>
+          </div>
+          <h3 class="font-bold text-dark mb-2">Relógios em Oferta</h3>
+          <p class="text-text-secondary text-sm mb-4">Até 40% de desconto em relógios selecionados</p>
+          <a href="#relogios" class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-lg transition-colors duration-300 inline-flex items-center">
+            <span>Ver Ofertas</span>
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+        
+        <!-- Destaque 2 -->
+        <div class="bg-white rounded-2xl p-6 text-center shadow-lg border-2 border-red-200 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+          <div class="sale-badge inline-block px-3 py-1 rounded-full text-white text-sm font-bold mb-4">
+            <i class="fas fa-bolt mr-2"></i>PROMOÇÃO RELÂMPAGO
+          </div>
+          <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-wind text-2xl text-red-600"></i>
+          </div>
+          <h3 class="font-bold text-dark mb-2">Perfumes em Liquidação</h3>
+          <p class="text-text-secondary text-sm mb-4">Descontos especiais em fragrâncias masculinas</p>
+          <a href="#perfumes" class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-lg transition-colors duration-300 inline-flex items-center">
+            <span>Ver Ofertas</span>
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+        
+        <!-- Destaque 3 -->
+        <div class="bg-white rounded-2xl p-6 text-center shadow-lg border-2 border-red-200 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+          <div class="sale-badge inline-block px-3 py-1 rounded-full text-white text-sm font-bold mb-4">
+            <i class="fas fa-gift mr-2"></i>COMBO ESPECIAL
+          </div>
+          <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-boxes text-2xl text-red-600"></i>
+          </div>
+          <h3 class="font-bold text-dark mb-2">Kits Exclusivos</h3>
+          <p class="text-text-secondary text-sm mb-4">Relógio + Perfume com super desconto</p>
+          <a href="#combos" class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-lg transition-colors duration-300 inline-flex items-center">
+            <span>Ver Ofertas</span>
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ofertas em Destaque -->
+  <section id="ofertas" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+        <div>
+          <h2 class="font-playfair text-3xl md:text-4xl font-bold text-dark mb-2">Ofertas em Destaque</h2>
+          <p class="text-text-secondary">Produtos selecionados com os melhores descontos</p>
+        </div>
+        
+        <div class="mt-4 md:mt-0 flex items-center space-x-4">
+          <span class="text-text-secondary">Ordenar por:</span>
+          <select class="bg-white border border-gray-300 text-dark py-2 pl-4 pr-10 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-primary">
+            <option>Maior Desconto</option>
+            <option>Preço: Menor ao Maior</option>
+            <option>Preço: Maior ao Menor</option>
+            <option>Mais Vendidos</option>
+          </select>
+        </div>
+      </div>
+      
+      <!-- Promoções de Relógios -->
+      <div id="relogios" class="mb-16">
+        <div class="flex items-center justify-between mb-8">
+          <h3 class="font-playfair text-2xl font-bold text-dark">Relógios em Promoção</h3>
+          <a href="relogios.html" class="text-primary hover:text-primary-dark font-medium flex items-center">
+            <span>Ver Todos</span>
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Produto 1 -->
+          <div class="hot-deal bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/0f0f0f/c9a76b?text=NIBOSI+Azul" alt="Relógio NIBOSI Azul" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="sale-badge absolute top-4 right-4 text-white font-bold py-1 px-3 rounded-full text-sm">
+                -40%
+              </div>
+              <div class="absolute top-4 left-4 bg-red-500 text-white font-bold py-1 px-3 rounded-full text-sm">
+                HOT DEAL
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Relógio NIBOSI Azul</h3>
+              <p class="text-text-secondary text-sm mb-4">Relógio masculino à prova d'água com pulseira em aço</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="text-sm text-gray-500">(42)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 12.000</span>
+                  <span class="text-sm text-gray-500 line-through ml-2">Kz 20.000</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+              <div class="mt-3 bg-red-50 text-red-600 text-sm font-medium py-1 px-2 rounded text-center">
+                <i class="fas fa-clock mr-1"></i> Oferta por tempo limitado
+              </div>
+            </div>
+          </div>
+          
+          <!-- Produto 2 -->
+          <div class="bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/0f0f0f/c9a76b?text=Rolls+Gold" alt="Relógio Rolls Gold" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="sale-badge absolute top-4 right-4 text-white font-bold py-1 px-3 rounded-full text-sm">
+                -25%
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Relógio Rolls Gold</h3>
+              <p class="text-text-secondary text-sm mb-4">Relógio de luxo em ouro rose, resistente à água</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="text-sm text-gray-500">(58)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 18.750</span>
+                  <span class="text-sm text-gray-500 line-through ml-2">Kz 25.000</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Produto 3 -->
+          <div class="bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/0f0f0f/c9a76b?text=Wenger+Preto" alt="Relógio Wenger Preto" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="sale-badge absolute top-4 right-4 text-white font-bold py-1 px-3 rounded-full text-sm">
+                -30%
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Relógio Wenger Preto</h3>
+              <p class="text-text-secondary text-sm mb-4">Relógio suíço com mostrador preto e pulseira em aço</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="text-sm text-gray-500">(47)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 24.500</span>
+                  <span class="text-sm text-gray-500 line-through ml-2">Kz 35.000</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Produto 4 -->
+          <div class="bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/0f0f0f/c9a76b?text=Seiko+5" alt="Relógio Seiko 5" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="sale-badge absolute top-4 right-4 text-white font-bold py-1 px-3 rounded-full text-sm">
+                -20%
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Relógio Seiko 5</h3>
+              <p class="text-text-secondary text-sm mb-4">Automático com mostrador azul, movimento japonês</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <span class="text-sm text-gray-500">(39)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 22.400</span>
+                  <span class="text-sm text-gray-500 line-through ml-2">Kz 28.000</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Promoções de Perfumes -->
+      <div id="perfumes" class="mb-16">
+        <div class="flex items-center justify-between mb-8">
+          <h3 class="font-playfair text-2xl font-bold text-dark">Perfumes em Promoção</h3>
+          <a href="perfumes.html" class="text-primary hover:text-primary-dark font-medium flex items-center">
+            <span>Ver Todos</span>
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Perfume 1 -->
+          <div class="hot-deal bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/1a1a1a/c9a76b?text=Sauvage" alt="Perfume Dior Sauvage" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="sale-badge absolute top-4 right-4 text-white font-bold py-1 px-3 rounded-full text-sm">
+                -35%
+              </div>
+              <div class="absolute top-4 left-4 bg-red-500 text-white font-bold py-1 px-3 rounded-full text-sm">
+                HOT DEAL
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Dior Sauvage</h3>
+              <p class="text-text-secondary text-sm mb-4">Notas amadeiradas e frescas com toque de pimenta</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="text-sm text-gray-500">(67)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 16.250</span>
+                  <span class="text-sm text-gray-500 line-through ml-2">Kz 25.000</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+              <div class="mt-3 bg-red-50 text-red-600 text-sm font-medium py-1 px-2 rounded text-center">
+                <i class="fas fa-clock mr-1"></i> Oferta por tempo limitado
+              </div>
+            </div>
+          </div>
+          
+          <!-- Perfume 2 -->
+          <div class="bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/1a1a1a/c9a76b?text=Bleu+de+Chanel" alt="Perfume Bleu de Chanel" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="sale-badge absolute top-4 right-4 text-white font-bold py-1 px-3 rounded-full text-sm">
+                -25%
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Bleu de Chanel</h3>
+              <p class="text-text-secondary text-sm mb-4">Fragrância amadeirada aromática e sofisticada</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="text-sm text-gray-500">(52)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 24.000</span>
+                  <span class="text-sm text-gray-500 line-through ml-2">Kz 32.000</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Perfume 3 -->
+          <div class="bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/1a1a1a/c9a76b?text=Versace+Eros" alt="Perfume Versace Eros" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="sale-badge absolute top-4 right-4 text-white font-bold py-1 px-3 rounded-full text-sm">
+                -30%
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Versace Eros</h3>
+              <p class="text-text-secondary text-sm mb-4">Aromático fresco com notas de menta e maçã verde</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="text-sm text-gray-500">(56)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 14.700</span>
+                  <span class="text-sm text-gray-500 line-through ml-2">Kz 21.000</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Perfume 4 -->
+          <div class="bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/1a1a1a/c9a76b?text=Armani+Code" alt="Perfume Armani Code" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="sale-badge absolute top-4 right-4 text-white font-bold py-1 px-3 rounded-full text-sm">
+                -20%
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Armani Code</h3>
+              <p class="text-text-secondary text-sm mb-4">Aromático amadeirado com notas de bergamota</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <span class="text-sm text-gray-500">(41)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 21.200</span>
+                  <span class="text-sm text-gray-500 line-through ml-2">Kz 26.500</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Combos Especiais -->
+      <div id="combos" class="mb-16">
+        <div class="flex items-center justify-between mb-8">
+          <h3 class="font-playfair text-2xl font-bold text-dark">Combos Especiais</h3>
+          <span class="text-primary font-medium">Economize ainda mais!</span>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Combo 1 -->
+          <div class="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 text-white shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 mb-6 md:mb-0">
+                <div class="sale-badge inline-block px-3 py-1 rounded-full text-white text-sm font-bold mb-4">
+                  <i class="fas fa-gift mr-2"></i>COMBO EXCLUSIVO
+                </div>
+                <h3 class="font-playfair text-2xl font-bold mb-4">Kit Elegância Masculina</h3>
+                <p class="mb-4">Relógio NIBOSI Azul + Perfume Dior Sauvage</p>
+                <div class="flex items-center mb-4">
+                  <span class="text-3xl font-bold mr-4">Kz 25.000</span>
+                  <span class="text-lg line-through opacity-75">Kz 40.000</span>
+                </div>
+                <div class="bg-dark bg-opacity-30 inline-block px-3 py-1 rounded-full text-sm font-bold">
+                  ECONOMIZE Kz 15.000
+                </div>
+              </div>
+              <div class="md:w-1/2 flex justify-center space-x-4">
+                <div class="bg-white p-2 rounded-lg shadow-md">
+                  <img src="https://placehold.co/150x150/0f0f0f/c9a76b?text=NIBOSI" alt="Relógio NIBOSI" class="w-24 h-24 object-cover rounded">
+                </div>
+                <div class="text-3xl text-dark flex items-center">+</div>
+                <div class="bg-white p-2 rounded-lg shadow-md">
+                  <img src="https://placehold.co/150x150/1a1a1a/c9a76b?text=Sauvage" alt="Perfume Dior" class="w-24 h-24 object-cover rounded">
+                </div>
+              </div>
+            </div>
+            <button class="w-full bg-dark hover:bg-dark-light text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 mt-6 flex items-center justify-center">
+              <i class="fas fa-shopping-cart mr-2"></i>
+              COMPRAR COMBO
+            </button>
+          </div>
+          
+          <!-- Combo 2 -->
+          <div class="bg-gradient-to-r from-dark to-dark-light rounded-2xl p-8 text-white shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 mb-6 md:mb-0">
+                <div class="bg-red-600 inline-block px-3 py-1 rounded-full text-white text-sm font-bold mb-4">
+                  <i class="fas fa-crown mr-2"></i>KIT PREMIUM
+                </div>
+                <h3 class="font-playfair text-2xl font-bold mb-4">Kit Executivo</h3>
+                <p class="mb-4">Relógio Wenger Preto + Perfume Bleu de Chanel</p>
+                <div class="flex items-center mb-4">
+                  <span class="text-3xl font-bold mr-4">Kz 45.000</span>
+                  <span class="text-lg line-through opacity-75">Kz 67.000</span>
+                </div>
+                <div class="bg-primary bg-opacity-30 inline-block px-3 py-1 rounded-full text-sm font-bold">
+                  ECONOMIZE Kz 22.000
+                </div>
+              </div>
+              <div class="md:w-1/2 flex justify-center space-x-4">
+                <div class="bg-white p-2 rounded-lg shadow-md">
+                  <img src="https://placehold.co/150x150/0f0f0f/c9a76b?text=Wenger" alt="Relógio Wenger" class="w-24 h-24 object-cover rounded">
+                </div>
+                <div class="text-3xl text-primary flex items-center">+</div>
+                <div class="bg-white p-2 rounded-lg shadow-md">
+                  <img src="https://placehold.co/150x150/1a1a1a/c9a76b?text=Bleu+Chanel" alt="Perfume Chanel" class="w-24 h-24 object-cover rounded">
+                </div>
+              </div>
+            </div>
+            <button class="w-full bg-primary hover:bg-primary-dark text-dark font-bold py-3 px-6 rounded-lg transition-colors duration-300 mt-6 flex items-center justify-center">
+              <i class="fas fa-shopping-cart mr-2"></i>
+              COMPRAR COMBO
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner Final de Promoção -->
+  <section class="py-16 bg-gradient-to-r from-dark to-dark-light text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="font-playfair text-3xl md:text-4xl font-bold mb-4">Não Perde Estas Ofertas!</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">Inscreva-se na nossa newsletter e seja o primeiro a saber das próximas promoções</p>
+      
+      <div class="max-w-md mx-auto flex">
+        <input type="email" placeholder="Seu e-mail" class="flex-grow py-3 px-4 rounded-l-lg text-dark focus:outline-none">
+        <button class="bg-primary hover:bg-primary-dark text-dark py-3 px-6 rounded-r-lg transition-colors duration-300 font-bold">
+          <i class="fas fa-paper-plane mr-2"></i>
+          Inscrever
+        </button>
+      </div>
+      
+      <p class="text-text-secondary mt-4 text-sm">Prometemos não enviar spam. Pode cancelar a qualquer momento.</p>
+    </div>
+  </section>
+
+ 

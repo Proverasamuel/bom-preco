@@ -1,0 +1,32 @@
+
+    .sidebar-item.active {
+      background-color: #c9a76b;
+      color: #0f0f0f;
+    }
+    
+    .sidebar-item.active i {
+      color: #0f0f0f;
+    }
+    
+    .sidebar-item:hover:not(.active) {
+      background-color: #2a2a2a;
+    }
+    
+    .table-row:hover {
+      background-color: #f8f9fa;
+    }
+    
+    .page-content {
+      display: none;
+    }
+    
+    .page-content.active {
+      display: block;
+    }
+    
+    .order-status-pending { background-color: #fef3cd; color: #856404; }
+    .order-status-confirmed { background-color: #cce7ff; color: #004085; }
+    .order-status-processing { background-color: #fff3cd; color: #856404; }
+    .order-status-shipped { background-color: #d1ecf1; color: #0c5460; }
+    .order-status-delivered { background-color: #d4edda; color: #155724; }
+    .order-status-cancelled { background-color: #f8d7da; color: #721c24; }

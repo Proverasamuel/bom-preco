@@ -1,0 +1,495 @@
+  <!-- Breadcrumb -->
+  <section class="bg-gray-100 py-4">
+    <div class="container mx-auto px-4">
+      <nav class="flex" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+          <li class="inline-flex items-center">
+            <a routerLink="/" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary">
+              <i class="fas fa-home mr-2"></i>
+              Início
+            </a>
+          </li>
+          <li aria-current="page">
+            <div class="flex items-center">
+              <i class="fas fa-chevron-right text-gray-400 mx-2"></i>
+              <span class="ml-1 text-sm font-medium text-gray-500 md:ml-2">Relógios</span>
+            </div>
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero Relógios -->
+  <section class="bg-gradient-to-br from-dark to-dark-light text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <h1 class="font-playfair text-4xl md:text-5xl font-bold mb-4">Relógios de Luxo</h1>
+          <p class="text-text-secondary text-lg mb-6 max-w-lg">Descubra nossa coleção exclusiva de relógios que combinam precisão, elegância e sofisticação. Encontre o relógio perfeito para cada ocasião.</p>
+          <div class="flex items-center space-x-4">
+            <div class="flex items-center">
+              <i class="fas fa-check-circle text-primary mr-2"></i>
+              <span>Garantia Internacional</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-check-circle text-primary mr-2"></i>
+              <span>Entrega em Toda Angola</span>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <div class="relative animate-float">
+            <div class="absolute -inset-4 bg-primary rounded-full opacity-20 blur-lg"></div>
+            <img src="https://placehold.co/500x400/0f0f0f/c9a76b?text=Relógios+de+Luxo" alt="Coleção de Relógios de Luxo" class="relative z-10 rounded-2xl shadow-2xl w-full max-w-md">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filtros Avançados -->
+  <section class="py-8 bg-white border-b">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center">
+        <div class="mb-4 lg:mb-0">
+          <h2 class="text-xl font-bold text-dark">Filtrar Relógios</h2>
+          <p class="text-text-secondary">Encontre o relógio perfeito para você</p>
+        </div>
+        
+        <div class="flex flex-wrap gap-4">
+          <!-- Filtro por Gênero -->
+          <div class="relative">
+            <select class="bg-white border border-gray-300 text-dark py-2 pl-4 pr-10 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-primary">
+              <option>Gênero</option>
+              <option>Masculino</option>
+              <option>Feminino</option>
+              <option>Unissex</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          
+          <!-- Filtro por Marca -->
+          <div class="relative">
+            <select class="bg-white border border-gray-300 text-dark py-2 pl-4 pr-10 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-primary">
+              <option>Marca</option>
+              <option>NIBOSI</option>
+              <option>Rolls</option>
+              <option>Wenger</option>
+              <option>Seiko</option>
+              <option>Casio</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          
+          <!-- Filtro por Preço -->
+          <div class="relative">
+            <select class="bg-white border border-gray-300 text-dark py-2 pl-4 pr-10 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-primary">
+              <option>Faixa de Preço</option>
+              <option>Até Kz 15.000</option>
+              <option>Kz 15.000 - Kz 30.000</option>
+              <option>Kz 30.000 - Kz 50.000</option>
+              <option>Acima de Kz 50.000</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          
+          <!-- Filtro por Estilo -->
+          <div class="relative">
+            <select class="bg-white border border-gray-300 text-dark py-2 pl-4 pr-10 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-primary">
+              <option>Estilo</option>
+              <option>Esportivo</option>
+              <option>Clássico</option>
+              <option>Moderno</option>
+              <option>Luxuoso</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          
+          <!-- Botão Limpar Filtros -->
+          <button class="bg-gray-200 hover:bg-gray-300 text-dark py-2 px-4 rounded-lg transition-colors duration-300">
+            <i class="fas fa-times mr-2"></i>
+            Limpar
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categorias de Relógios -->
+  <section class="py-8 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="font-playfair text-3xl font-bold text-dark text-center mb-2">Categorias</h2>
+      <p class="text-text-secondary text-center mb-8 max-w-2xl mx-auto">Explore nossas categorias de relógios e encontre o estilo que combina com você</p>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <!-- Categoria 1 -->
+        <a href="#" class="bg-white rounded-2xl p-6 text-center shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:bg-opacity-20 transition-colors duration-300">
+            <i class="fas fa-user-tie text-2xl text-primary"></i>
+          </div>
+          <h3 class="font-bold text-dark mb-2">Clássicos</h3>
+          <p class="text-text-secondary text-sm">Elegância atemporal</p>
+        </a>
+        
+        <!-- Categoria 2 -->
+        <a href="#" class="bg-white rounded-2xl p-6 text-center shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:bg-opacity-20 transition-colors duration-300">
+            <i class="fas fa-running text-2xl text-primary"></i>
+          </div>
+          <h3 class="font-bold text-dark mb-2">Esportivos</h3>
+          <p class="text-text-secondary text-sm">Para atividades</p>
+        </a>
+        
+        <!-- Categoria 3 -->
+        <a href="#" class="bg-white rounded-2xl p-6 text-center shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:bg-opacity-20 transition-colors duration-300">
+            <i class="fas fa-gem text-2xl text-primary"></i>
+          </div>
+          <h3 class="font-bold text-dark mb-2">Luxuosos</h3>
+          <p class="text-text-secondary text-sm">Edições premium</p>
+        </a>
+        
+        <!-- Categoria 4 -->
+        <a href="#" class="bg-white rounded-2xl p-6 text-center shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:bg-opacity-20 transition-colors duration-300">
+            <i class="fas fa-briefcase text-2xl text-primary"></i>
+          </div>
+          <h3 class="font-bold text-dark mb-2">Executivos</h3>
+          <p class="text-text-secondary text-sm">Para negócios</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produtos - Relógios -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+        <div>
+          <h2 class="font-playfair text-3xl md:text-4xl font-bold text-dark mb-2">Nossa Coleção</h2>
+          <p class="text-text-secondary">Relógios selecionados com cuidado para você</p>
+        </div>
+        
+        <div class="mt-4 md:mt-0 flex items-center space-x-4">
+          <span class="text-text-secondary">Ordenar por:</span>
+          <select class="bg-white border border-gray-300 text-dark py-2 pl-4 pr-10 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-primary">
+            <option>Mais Relevantes</option>
+            <option>Preço: Menor ao Maior</option>
+            <option>Preço: Maior ao Menor</option>
+            <option>Mais Vendidos</option>
+            <option>Melhor Avaliados</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Produto 1 -->
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="relative overflow-hidden">
+            <img src="https://placehold.co/300x300/0f0f0f/c9a76b?text=NIBOSI+Azul" alt="Relógio NIBOSI Azul" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute top-4 right-4 bg-primary text-dark font-bold py-1 px-3 rounded-full text-sm">
+              -15%
+            </div>
+            <div class="absolute top-4 left-4 bg-red-500 text-white font-bold py-1 px-3 rounded-full text-sm">
+              Mais Vendido
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-playfair text-xl font-bold text-dark mb-2">Relógio NIBOSI Azul</h3>
+            <p class="text-text-secondary text-sm mb-4">Relógio masculino à prova d'água com pulseira em aço inoxidável</p>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="text-sm text-gray-500">(42)</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-2xl font-bold text-dark">Kz 15.000</span>
+                <span class="text-sm text-gray-500 line-through ml-2">Kz 17.500</span>
+              </div>
+              <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Produto 2 -->
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="relative overflow-hidden">
+            <img src="https://placehold.co/300x300/0f0f0f/c9a76b?text=NIBOSI+Verde" alt="Relógio NIBOSI Verde" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-6">
+            <h3 class="font-playfair text-xl font-bold text-dark mb-2">Relógio NIBOSI Verde</h3>
+            <p class="text-text-secondary text-sm mb-4">Mostrador verde com detalhes em dourado, pulseira de couro</p>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <span class="text-sm text-gray-500">(36)</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-2xl font-bold text-dark">Kz 15.000</span>
+              </div>
+              <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Produto 3 -->
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="relative overflow-hidden">
+            <img src="https://placehold.co/300x300/0f0f0f/c9a76b?text=Rolls+Gold" alt="Relógio Rolls Gold" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute top-4 right-4 bg-red-500 text-white font-bold py-1 px-3 rounded-full text-sm">
+              Novo
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-playfair text-xl font-bold text-dark mb-2">Relógio Rolls Gold</h3>
+            <p class="text-text-secondary text-sm mb-4">Relógio de luxo em ouro rose, resistente à água</p>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="text-sm text-gray-500">(58)</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-2xl font-bold text-dark">Kz 25.000</span>
+              </div>
+              <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Produto 4 -->
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="relative overflow-hidden">
+            <img src="https://placehold.co/300x300/0f0f0f/c9a76b?text=Wenger+Preto" alt="Relógio Wenger Preto" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-6">
+            <h3 class="font-playfair text-xl font-bold text-dark mb-2">Relógio Wenger Preto</h3>
+            <p class="text-text-secondary text-sm mb-4">Relógio suíço com mostrador preto e pulseira em aço</p>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="text-sm text-gray-500">(47)</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-2xl font-bold text-dark">Kz 35.000</span>
+              </div>
+              <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Produto 5 -->
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="relative overflow-hidden">
+            <img src="https://placehold.co/300x300/0f0f0f/c9a76b?text=Seiko+5" alt="Relógio Seiko 5" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-6">
+            <h3 class="font-playfair text-xl font-bold text-dark mb-2">Relógio Seiko 5</h3>
+            <p class="text-text-secondary text-sm mb-4">Automático com mostrador azul, movimento japonês</p>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <span class="text-sm text-gray-500">(39)</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-2xl font-bold text-dark">Kz 28.000</span>
+              </div>
+              <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Produto 6 -->
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="relative overflow-hidden">
+            <img src="https://placehold.co/300x300/0f0f0f/c9a76b?text=Casio+Edifice" alt="Relógio Casio Edifice" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute top-4 right-4 bg-primary text-dark font-bold py-1 px-3 rounded-full text-sm">
+              -10%
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-playfair text-xl font-bold text-dark mb-2">Casio Edifice</h3>
+            <p class="text-text-secondary text-sm mb-4">Cronógrafo com múltiplos submostradores, à prova d'água</p>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="text-sm text-gray-500">(51)</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-2xl font-bold text-dark">Kz 22.000</span>
+                <span class="text-sm text-gray-500 line-through ml-2">Kz 24.500</span>
+              </div>
+              <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Produto 7 -->
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="relative overflow-hidden">
+            <img src="https://placehold.co/300x300/0f0f0f/c9a76b?text=Fossil+Grant" alt="Relógio Fossil Grant" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-6">
+            <h3 class="font-playfair text-xl font-bold text-dark mb-2">Fossil Grant</h3>
+            <p class="text-text-secondary text-sm mb-4">Relógio mecânico com mostrador marrom, pulseira de couro</p>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <span class="text-sm text-gray-500">(33)</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-2xl font-bold text-dark">Kz 19.500</span>
+              </div>
+              <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Produto 8 -->
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="relative overflow-hidden">
+            <img src="https://placehold.co/300x300/0f0f0f/c9a76b?text=Michael+Kors" alt="Relógio Michael Kors" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute top-4 right-4 bg-red-500 text-white font-bold py-1 px-3 rounded-full text-sm">
+              Novo
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-playfair text-xl font-bold text-dark mb-2">Michael Kors</h3>
+            <p class="text-text-secondary text-sm mb-4">Relógio feminino dourado com detalhes em cristais</p>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="text-sm text-gray-500">(29)</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-2xl font-bold text-dark">Kz 32.000</span>
+              </div>
+              <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Paginação -->
+      <div class="flex justify-center mt-12">
+        <nav class="flex items-center space-x-2">
+          <a href="#" class="px-3 py-2 rounded-lg bg-primary text-dark font-bold">1</a>
+          <a href="#" class="px-3 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 text-dark transition-colors duration-300">2</a>
+          <a href="#" class="px-3 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 text-dark transition-colors duration-300">3</a>
+          <a href="#" class="px-3 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 text-dark transition-colors duration-300">
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destaques -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="font-playfair text-3xl md:text-4xl font-bold text-dark mb-4">Por que Escolher Nossos Relógios?</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Destaque 1 -->
+        <div class="bg-white p-6 rounded-2xl shadow-md text-center transition-all duration-300 hover:shadow-lg">
+          <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-gem text-2xl text-primary"></i>
+          </div>
+          <h3 class="font-bold text-dark mb-2">Qualidade Premium</h3>
+          <p class="text-text-secondary">Trabalhamos apenas com marcas reconhecidas e materiais da mais alta qualidade para garantir durabilidade e precisão.</p>
+        </div>
+        
+        <!-- Destaque 2 -->
+        <div class="bg-white p-6 rounded-2xl shadow-md text-center transition-all duration-300 hover:shadow-lg">
+          <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-shield-alt text-2xl text-primary"></i>
+          </div>
+          <h3 class="font-bold text-dark mb-2">Garantia Internacional</h3>
+          <p class="text-text-secondary">Todos os nossos relógios possuem garantia do fabricante, válida em todo o mundo para sua tranquilidade.</p>
+        </div>
+        
+        <!-- Destaque 3 -->
+        <div class="bg-white p-6 rounded-2xl shadow-md text-center transition-all duration-300 hover:shadow-lg">
+          <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-truck text-2xl text-primary"></i>
+          </div>
+          <h3 class="font-bold text-dark mb-2">Entrega Rápida</h3>
+          <p class="text-text-secondary">Entregamos em todo Angola em até 48 horas para a área metropolitana e 5 dias úteis para outras províncias.</p>
+        </div>
+      </div>
+    </div>
+  </section>

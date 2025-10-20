@@ -1,0 +1,1000 @@
+ <!-- Breadcrumb -->
+  <section class="bg-gray-100 py-4">
+    <div class="container mx-auto px-4">
+      <nav class="flex" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+          <li class="inline-flex items-center">
+            <a routerLink="/" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary">
+              <i class="fas fa-home mr-2"></i>
+              Início
+            </a>
+          </li>
+          <li aria-current="page">
+            <div class="flex items-center">
+              <i class="fas fa-chevron-right text-gray-400 mx-2"></i>
+              <span class="ml-1 text-sm font-medium text-gray-500 md:ml-2">Acessórios</span>
+            </div>
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero Acessórios -->
+  <section class="bg-gradient-to-br from-dark to-dark-light text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <h1 class="font-playfair text-4xl md:text-5xl font-bold mb-4">Acessórios Masculinos</h1>
+          <p class="text-text-secondary text-lg mb-6 max-w-lg">Complete seu estilo com nossa coleção exclusiva de acessórios. Anéis, pulseiras, fios e carteiras que elevam qualquer visual.</p>
+          <div class="flex items-center space-x-4">
+            <div class="flex items-center">
+              <i class="fas fa-check-circle text-primary mr-2"></i>
+              <span>Materiais Premium</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-check-circle text-primary mr-2"></i>
+              <span>Acabamento Impecável</span>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <div class="relative animate-float">
+            <div class="absolute -inset-4 bg-primary rounded-full opacity-20 blur-lg"></div>
+            <img src="https://placehold.co/500x400/0f0f0f/c9a76b?text=Acessórios+Masculinos" alt="Coleção de Acessórios Masculinos" class="relative z-10 rounded-2xl shadow-2xl w-full max-w-md">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filtros Avançados -->
+  <section class="py-8 bg-white border-b">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center">
+        <div class="mb-4 lg:mb-0">
+          <h2 class="text-xl font-bold text-dark">Filtrar Acessórios</h2>
+          <p class="text-text-secondary">Encontre os acessórios perfeitos para seu estilo</p>
+        </div>
+        
+        <div class="flex flex-wrap gap-4">
+          <!-- Filtro por Categoria -->
+          <div class="relative">
+            <select class="bg-white border border-gray-300 text-dark py-2 pl-4 pr-10 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-primary">
+              <option>Todas as Categorias</option>
+              <option>Anéis</option>
+              <option>Pulseiras</option>
+              <option>Fios</option>
+              <option>Combos</option>
+              <option>Carteiras</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          
+          <!-- Filtro por Material -->
+          <div class="relative">
+            <select class="bg-white border border-gray-300 text-dark py-2 pl-4 pr-10 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-primary">
+              <option>Material</option>
+              <option>Aço Inoxidável</option>
+              <option>Couro Legítimo</option>
+              <option>Prata</option>
+              <option>Titânio</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          
+          <!-- Filtro por Preço -->
+          <div class="relative">
+            <select class="bg-white border border-gray-300 text-dark py-2 pl-4 pr-10 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-primary">
+              <option>Faixa de Preço</option>
+              <option>Até Kz 5.000</option>
+              <option>Kz 5.000 - Kz 15.000</option>
+              <option>Kz 15.000 - Kz 30.000</option>
+              <option>Acima de Kz 30.000</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          
+          <!-- Botão Limpar Filtros -->
+          <button class="bg-gray-200 hover:bg-gray-300 text-dark py-2 px-4 rounded-lg transition-colors duration-300">
+            <i class="fas fa-times mr-2"></i>
+            Limpar
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categorias de Acessórios -->
+  <section class="py-8 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="font-playfair text-3xl font-bold text-dark text-center mb-2">Nossas Categorias</h2>
+      <p class="text-text-secondary text-center mb-8 max-w-2xl mx-auto">Explore nossa variedade de acessórios masculinos premium</p>
+      
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <!-- Categoria 1 -->
+        <a href="#aneis" class="bg-white rounded-xl p-4 text-center shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="silver-gradient w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-gray-200 transition-colors duration-300">
+            <i class="fas fa-ring text-gray-700 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-dark text-sm">Anéis</h3>
+        </a>
+        
+        <!-- Categoria 2 -->
+        <a href="#fios" class="bg-white rounded-xl p-4 text-center shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="silver-gradient w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-gray-200 transition-colors duration-300">
+            <i class="fas fa-link text-gray-700 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-dark text-sm">Fios</h3>
+        </a>
+        
+        <!-- Categoria 3 -->
+        <a href="#combos" class="bg-white rounded-xl p-4 text-center shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="bg-primary bg-opacity-10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-primary group-hover:bg-opacity-20 transition-colors duration-300">
+            <i class="fas fa-gift text-primary text-xl"></i>
+          </div>
+          <h3 class="font-bold text-dark text-sm">Combos</h3>
+        </a>
+        
+        <!-- Categoria 4 -->
+        <a href="#pulseiras-couro" class="bg-white rounded-xl p-4 text-center shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="leather-gradient w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:opacity-90 transition-colors duration-300">
+            <i class="fas fa-band-aid text-white text-xl"></i>
+          </div>
+          <h3 class="font-bold text-dark text-sm">Pulseiras Couro</h3>
+        </a>
+        
+        <!-- Categoria 5 -->
+        <a href="#pulseiras-aco" class="bg-white rounded-xl p-4 text-center shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="silver-gradient w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-gray-200 transition-colors duration-300">
+            <i class="fas fa-circle-notch text-gray-700 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-dark text-sm">Pulseiras Aço</h3>
+        </a>
+        
+        <!-- Categoria 6 -->
+        <a href="#carteiras" class="bg-white rounded-xl p-4 text-center shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="leather-gradient w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:opacity-90 transition-colors duration-300">
+            <i class="fas fa-wallet text-white text-xl"></i>
+          </div>
+          <h3 class="font-bold text-dark text-sm">Carteiras</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produtos - Acessórios -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+        <div>
+          <h2 class="font-playfair text-3xl md:text-4xl font-bold text-dark mb-2">Nossa Coleção</h2>
+          <p class="text-text-secondary">Acessórios selecionados que complementam seu estilo</p>
+        </div>
+        
+        <div class="mt-4 md:mt-0 flex items-center space-x-4">
+          <span class="text-text-secondary">Ordenar por:</span>
+          <select class="bg-white border border-gray-300 text-dark py-2 pl-4 pr-10 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-primary">
+            <option>Mais Relevantes</option>
+            <option>Preço: Menor ao Maior</option>
+            <option>Preço: Maior ao Menor</option>
+            <option>Mais Vendidos</option>
+            <option>Melhor Avaliados</option>
+          </select>
+        </div>
+      </div>
+      
+      <!-- Anéis de Aço Inox -->
+      <div id="aneis" class="mb-16">
+        <div class="flex items-center justify-between mb-8">
+          <h3 class="font-playfair text-2xl font-bold text-dark">Anéis de Aço Inoxidável</h3>
+          <a href="#" class="text-primary hover:text-primary-dark font-medium flex items-center">
+            <span>Ver Todos</span>
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Anel 1 -->
+          <div class="accessory-card bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/f8f9fa/6c757d?text=Anel+Prata" alt="Anel de Aço Inox Prata" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="absolute top-4 right-4 bg-primary text-dark font-bold py-1 px-3 rounded-full text-sm">
+                -15%
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Anel Masculino Prata</h3>
+              <p class="text-text-secondary text-sm mb-4">Anel em aço inoxidável com acabamento brilhante, tamanho ajustável</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="text-sm text-gray-500">(28)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 4.250</span>
+                  <span class="text-sm text-gray-500 line-through ml-2">Kz 5.000</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Anel 2 -->
+          <div class="accessory-card bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/343a40/ffffff?text=Anel+Preto" alt="Anel de Aço Inox Preto" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="absolute top-4 right-4 bg-red-500 text-white font-bold py-1 px-3 rounded-full text-sm">
+                Novo
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Anel Masculino Preto</h3>
+              <p class="text-text-secondary text-sm mb-4">Anel PVD preto com detalhes em relevo, resistente a arranhões</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <span class="text-sm text-gray-500">(19)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 5.500</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Anel 3 -->
+          <div class="accessory-card bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/e9ecef/495057?text=Anel+Duplo" alt="Anel Duplo Aço Inox" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Anel Duplo Entrelaçado</h3>
+              <p class="text-text-secondary text-sm mb-4">Design moderno com dois anéis entrelaçados em aço inoxidável</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="text-sm text-gray-500">(34)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 6.800</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Anel 4 -->
+          <div class="accessory-card bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/6c757d/dee2e6?text=Anel+Ouro+Rosa" alt="Anel de Aço Inox Ouro Rosa" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Anel Ouro Rosa</h3>
+              <p class="text-text-secondary text-sm mb-4">Anel em aço inox com revestimento ouro rosa, antialérgico</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="text-sm text-gray-500">(26)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 5.200</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Fios -->
+      <div id="fios" class="mb-16">
+        <div class="flex items-center justify-between mb-8">
+          <h3 class="font-playfair text-2xl font-bold text-dark">Fios Masculinos</h3>
+          <a href="#" class="text-primary hover:text-primary-dark font-medium flex items-center">
+            <span>Ver Todos</span>
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Fio 1 -->
+          <div class="accessory-card bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/0f0f0f/c9a76b?text=Fio+Prata" alt="Fio de Aço Inoxidável Prata" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Fio Masculino Prata</h3>
+              <p class="text-text-secondary text-sm mb-4">Cordão em aço inoxidável 50cm, fecho de segurança</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <span class="text-sm text-gray-500">(31)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 3.500</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Fio 2 -->
+          <div class="accessory-card bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/1a1a1a/c9a76b?text=Fio+Ouro" alt="Fio de Aço Inoxidável Ouro" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="absolute top-4 right-4 bg-primary text-dark font-bold py-1 px-3 rounded-full text-sm">
+                -10%
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Fio Masculino Dourado</h3>
+              <p class="text-text-secondary text-sm mb-4">Cordão banhado a ouro 55cm, não escurece com o tempo</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="text-sm text-gray-500">(42)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 4.500</span>
+                  <span class="text-sm text-gray-500 line-through ml-2">Kz 5.000</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Fio 3 -->
+          <div class="accessory-card bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/2d2d2d/c9a76b?text=Fio+Grosso" alt="Fio Grosso Aço Inox" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Fio Grosso Masculino</h3>
+              <p class="text-text-secondary text-sm mb-4">Cordão estilo cubano 5mm, fecho de rosca, 60cm</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="text-sm text-gray-500">(38)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 7.200</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Fio 4 -->
+          <div class="accessory-card bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/3d3d3d/c9a76b?text=Fio+Preto" alt="Fio Preto Aço Inox" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="absolute top-4 right-4 bg-red-500 text-white font-bold py-1 px-3 rounded-full text-sm">
+                Novo
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Fio PVD Preto</h3>
+              <p class="text-text-secondary text-sm mb-4">Cordão em aço inox com revestimento PVD preto, 50cm</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <span class="text-sm text-gray-500">(17)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 4.800</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Combos Fio + Anel -->
+      <div id="combos" class="mb-16">
+        <div class="flex items-center justify-between mb-8">
+          <h3 class="font-playfair text-2xl font-bold text-dark">Combos Fio + Anel</h3>
+          <span class="text-primary font-medium">Economize com nossos kits</span>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Combo 1 -->
+          <div class="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 text-white shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 mb-6 md:mb-0">
+                <div class="bg-dark bg-opacity-30 inline-block px-3 py-1 rounded-full text-sm font-bold mb-4">
+                  <i class="fas fa-gift mr-2"></i>COMBO PRATA
+                </div>
+                <h3 class="font-playfair text-2xl font-bold mb-4">Kit Prata Completo</h3>
+                <p class="mb-4">Anel Masculino Prata + Fio Masculino Prata</p>
+                <div class="flex items-center mb-4">
+                  <span class="text-3xl font-bold mr-4">Kz 6.500</span>
+                  <span class="text-lg line-through opacity-75">Kz 7.750</span>
+                </div>
+                <div class="bg-dark bg-opacity-30 inline-block px-3 py-1 rounded-full text-sm font-bold">
+                  ECONOMIZE Kz 1.250
+                </div>
+              </div>
+              <div class="md:w-1/2 flex justify-center space-x-4">
+                <div class="bg-white p-2 rounded-lg shadow-md">
+                  <img src="https://placehold.co/100x100/f8f9fa/6c757d?text=Anel" alt="Anel Prata" class="w-20 h-20 object-cover rounded">
+                </div>
+                <div class="text-3xl text-dark flex items-center">+</div>
+                <div class="bg-white p-2 rounded-lg shadow-md">
+                  <img src="https://placehold.co/100x100/f8f9fa/6c757d?text=Fio" alt="Fio Prata" class="w-20 h-20 object-cover rounded">
+                </div>
+              </div>
+            </div>
+            <button class="w-full bg-dark hover:bg-dark-light text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 mt-6 flex items-center justify-center">
+              <i class="fas fa-shopping-cart mr-2"></i>
+              COMPRAR COMBO
+            </button>
+          </div>
+          
+          <!-- Combo 2 -->
+          <div class="bg-gradient-to-r from-dark to-dark-light rounded-2xl p-8 text-white shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 mb-6 md:mb-0">
+                <div class="bg-primary bg-opacity-30 inline-block px-3 py-1 rounded-full text-sm font-bold mb-4">
+                  <i class="fas fa-crown mr-2"></i>COMBO PREMIUM
+                </div>
+                <h3 class="font-playfair text-2xl font-bold mb-4">Kit Dourado Premium</h3>
+                <p class="mb-4">Anel Ouro Rosa + Fio Masculino Dourado</p>
+                <div class="flex items-center mb-4">
+                  <span class="text-3xl font-bold mr-4">Kz 8.200</span>
+                  <span class="text-lg line-through opacity-75">Kz 10.000</span>
+                </div>
+                <div class="bg-primary bg-opacity-30 inline-block px-3py-1 rounded-full text-sm font-bold">
+                  ECONOMIZE Kz 1.800
+                </div>
+              </div>
+              <div class="md:w-1/2 flex justify-center space-x-4">
+                <div class="bg-white p-2 rounded-lg shadow-md">
+                  <img src="https://placehold.co/100x100/6c757d/dee2e6?text=Anel+Ouro" alt="Anel Ouro Rosa" class="w-20 h-20 object-cover rounded">
+                </div>
+                <div class="text-3xl text-primary flex items-center">+</div>
+                <div class="bg-white p-2 rounded-lg shadow-md">
+                  <img src="https://placehold.co/100x100/1a1a1a/c9a76b?text=Fio+Ouro" alt="Fio Dourado" class="w-20 h-20 object-cover rounded">
+                </div>
+              </div>
+            </div>
+            <button class="w-full bg-primary hover:bg-primary-dark text-dark font-bold py-3 px-6 rounded-lg transition-colors duration-300 mt-6 flex items-center justify-center">
+              <i class="fas fa-shopping-cart mr-2"></i>
+              COMPRAR COMBO
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Pulseiras de Couro -->
+      <div id="pulseiras-couro" class="mb-16">
+        <div class="flex items-center justify-between mb-8">
+          <h3 class="font-playfair text-2xl font-bold text-dark">Pulseiras de Couro</h3>
+          <a href="#" class="text-primary hover:text-primary-dark font-medium flex items-center">
+            <span>Ver Todos</span>
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Pulseira 1 -->
+          <div class="accessory-card bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/8B4513/ffffff?text=Couro+Marrom" alt="Pulseira de Couro Marrom" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Pulseira Couro Marrom</h3>
+              <p class="text-text-secondary text-sm mb-4">Couro legítimo, fivela em aço inox, tamanho regulável</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <span class="text-sm text-gray-500">(23)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 6.500</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Pulseira 2 -->
+          <div class="accessory-card bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/000000/ffffff?text=Couro+Preto" alt="Pulseira de Couro Preto" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="absolute top-4 right-4 bg-primary text-dark font-bold py-1 px-3 rounded-full text-sm">
+                -20%
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Pulseira Couro Preto</h3>
+              <p class="text-text-secondary text-sm mb-4">Couro legítimo preto, costura reforçada, fecho de pressão</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="text-sm text-gray-500">(37)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 5.600</span>
+                  <span class="text-sm text-gray-500 line-through ml-2">Kz 7.000</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Pulseira 3 -->
+          <div class="accessory-card bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/A0522D/ffffff?text=Couro+Claro" alt="Pulseira de Couro Claro" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Pulseira Couro Claro</h3>
+              <p class="text-text-secondary text-sm mb-4">Couro natural claro, envelhece com elegância, fivela vintage</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="text-sm text-gray-500">(29)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 7.800</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Pulseira 4 -->
+          <div class="accessory-card bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/654321/ffffff?text=Couro+Texturizado" alt="Pulseira de Couro Texturizado" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="absolute top-4 right-4 bg-red-500 text-white font-bold py-1 px-3 rounded-full text-sm">
+                Novo
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Pulseira Couro Rugoso</h3>
+              <p class="text-text-secondary text-sm mb-4">Couro texturizado, aspecto rústico, fecho magnético</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <span class="text-sm text-gray-500">(14)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 8.200</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Pulseiras de Aço Inoxidável -->
+      <div id="pulseiras-aco" class="mb-16">
+        <div class="flex items-center justify-between mb-8">
+          <h3 class="font-playfair text-2xl font-bold text-dark">Pulseiras de Aço Inoxidável</h3>
+          <a href="#" class="text-primary hover:text-primary-dark font-medium flex items-center">
+            <span>Ver Todos</span>
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Pulseira Aço 1 -->
+          <div class="accessory-card bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/c0c0c0/555555?text=Pulseira+Malha" alt="Pulseira de Aço Malha" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Pulseira Malha Milanês</h3>
+              <p class="text-text-secondary text-sm mb-4">Malha milanês em aço inox, fecho duplo de segurança</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <span class="text-sm text-gray-500">(32)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 9.500</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Pulseira Aço 2 -->
+          <div class="accessory-card bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/999999/333333?text=Pulseira+Elos" alt="Pulseira de Aço com Elos" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="absolute top-4 right-4 bg-primary text-dark font-bold py-1 px-3 rounded-full text-sm">
+                -15%
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Pulseira Elos Retangulares</h3>
+              <p class="text-text-secondary text-sm mb-4">Design com elos retangulares, fecho de dupla segurança</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="text-sm text-gray-500">(41)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 11.050</span>
+                  <span class="text-sm text-gray-500 line-through ml-2">Kz 13.000</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Pulseira Aço 3 -->
+          <div class="accessory-card bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/777777/cccccc?text=Pulseira+Ouro+Rosa" alt="Pulseira de Aço Ouro Rosa" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Pulseira Ouro Rosa</h3>
+              <p class="text-text-secondary text-sm mb-4">Aço inox com revestimento ouro rosa, elos entrelaçados</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="text-sm text-gray-500">(27)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 12.800</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Pulseira Aço 4 -->
+          <div class="accessory-card bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/444444/aaaaaa?text=Pulseira+Black" alt="Pulseira de Aço Preto" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="absolute top-4 right-4 bg-red-500 text-white font-bold py-1 px-3 rounded-full text-sm">
+                Novo
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Pulseira PVD Preto</h3>
+              <p class="text-text-secondary text-sm mb-4">Aço inox com revestimento PVD preto, design moderno</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <span class="text-sm text-gray-500">(18)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 10.500</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Carteiras -->
+      <div id="carteiras" class="mb-16">
+        <div class="flex items-center justify-between mb-8">
+          <h3 class="font-playfair text-2xl font-bold text-dark">Carteiras Masculinas</h3>
+          <a href="#" class="text-primary hover:text-primary-dark font-medium flex items-center">
+            <span>Ver Todos</span>
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Carteira 1 -->
+          <div class="accessory-card bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/8B4513/ffffff?text=Carteira+Couro" alt="Carteira de Couro Marrom" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Carteira Couro Marrom</h3>
+              <p class="text-text-secondary text-sm mb-4">Couro legítimo, múltiplos compartimentos, RFID protection</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <span class="text-sm text-gray-500">(45)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 12.500</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Carteira 2 -->
+          <div class="accessory-card bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/000000/ffffff?text=Carteira+Preta" alt="Carteira de Couro Preta" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="absolute top-4 right-4 bg-primary text-dark font-bold py-1 px-3 rounded-full text-sm">
+                -10%
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Carteira Couro Preto</h3>
+              <p class="text-text-secondary text-sm mb-4">Design slim, couro ecológico, compartimento para moedas</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="text-sm text-gray-500">(52)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 10.800</span>
+                  <span class="text-sm text-gray-500 line-through ml-2">Kz 12.000</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Carteira 3 -->
+          <div class="accessory-card bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/654321/ffffff?text=Carteira+Bifold" alt="Carteira Bifold" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Carteira Bifold Premium</h3>
+              <p class="text-text-secondary text-sm mb-4">Couro full-grain, 8 slots para cartões, fecho magnético</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="text-sm text-gray-500">(38)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 15.200</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Carteira 4 -->
+          <div class="accessory-card bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/300x300/A0522D/ffffff?text=Carteira+RFID" alt="Carteira com RFID" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="absolute top-4 right-4 bg-red-500 text-white font-bold py-1 px-3 rounded-full text-sm">
+                Novo
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-xl font-bold text-dark mb-2">Carteira Segurança RFID</h3>
+              <p class="text-text-secondary text-sm mb-4">Proteção contra clonagem, couro italiano, design minimalista</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <span class="text-sm text-gray-500">(21)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-dark">Kz 18.500</span>
+                </div>
+                <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Paginação -->
+      <div class="flex justify-center mt-12">
+        <nav class="flex items-center space-x-2">
+          <a href="#" class="px-3 py-2 rounded-lg bg-primary text-dark font-bold">1</a>
+          <a href="#" class="px-3 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 text-dark transition-colors duration-300">2</a>
+          <a href="#" class="px-3 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 text-dark transition-colors duration-300">3</a>
+          <a href="#" class="px-3 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 text-dark transition-colors duration-300">
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dicas de Estilo -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="font-playfair text-3xl md:text-4xl font-bold text-dark mb-4">Como Combinar Seus Acessórios</h2>
+        <p class="text-text-secondary max-w-2xl mx-auto">Dicas profissionais para criar looks harmoniosos com acessórios masculinos</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Dica 1 -->
+        <div class="bg-white p-6 rounded-2xl shadow-md text-center transition-all duration-300 hover:shadow-lg">
+          <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-palette text-2xl text-primary"></i>
+          </div>
+          <h3 class="font-bold text-dark mb-2">Harmonia de Metais</h3>
+          <p class="text-text-secondary">Combine acessórios do mesmo tom metálico. Prata com prata, ouro com ouro para um visual coeso e elegante.</p>
+        </div>
+        
+        <!-- Dica 2 -->
+        <div class="bg-white p-6 rounded-2xl shadow-md text-center transition-all duration-300 hover:shadow-lg">
+          <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-balance-scale text-2xl text-primary"></i>
+          </div>
+          <h3 class="font-bold text-dark mb-2">Equilíbrio Visual</h3>
+          <p class="text-text-secondary">Não exagere na quantidade. Escolha 2-3 acessórios que se complementem sem competir pela atenção.</p>
+        </div>
+        
+        <!-- Dica 3 -->
+        <div class="bg-white p-6 rounded-2xl shadow-md text-center transition-all duration-300 hover:shadow-lg">
+          <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-tshirt text-2xl text-primary"></i>
+          </div>
+          <h3 class="font-bold text-dark mb-2">Ocasião Adequada</h3>
+          <p class="text-text-secondary">Ajuste seus acessórios ao contexto. Pulseiras de couro para o dia a dia, aço inox para ocasiões formais.</p>
+        </div>
+      </div>
+    </div>
+  </section>

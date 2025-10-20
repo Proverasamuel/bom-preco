@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+/* src/styles.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+  html {
+      scroll-behavior: smooth;
+    }
+     .category-active {
+      background-color: #c9a76b;
+      color: #0f0f0f;
+    }
+
+       .filter-active {
+      background-color: #c9a76b;
+      color: #0f0f0f;
+      border-color: #c9a76b;
+    }
+
+     /* Animações personalizadas */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }

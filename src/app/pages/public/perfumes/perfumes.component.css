@@ -1,0 +1,13 @@
+ /* Animações personalizadas */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    .fragrance-card {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    }

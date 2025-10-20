@@ -1,0 +1,21 @@
+ /* Animações personalizadas */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    .accessory-card {
+      transition: all 0.3s ease;
+    }
+    
+    .silver-gradient {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+    
+    .leather-gradient {
+      background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    }

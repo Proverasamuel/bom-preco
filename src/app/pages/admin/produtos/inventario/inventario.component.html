@@ -1,0 +1,176 @@
+  <!-- Header -->
+      <header class="bg-white border-b border-gray-200 py-4 px-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-4">
+            <button class="text-gray-500 hover:text-dark lg:hidden">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+            <h2 class="text-xl font-bold text-dark" id="pageTitle">Inventário</h2>
+          </div>
+          
+          <div class="flex items-center space-x-4">
+            <div class="text-sm text-gray-500">
+              <i class="fas fa-calendar-alt mr-2"></i>
+              <span id="currentDate">20 de Novembro, 2025</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      
+      <!-- Conteúdo das Páginas -->
+      <main class="flex-1 overflow-y-auto p-6">
+            <!-- Página: Inventário -->
+        <div id="inventario" class="page-content">
+          <div class="flex justify-between items-center mb-6">
+            <h3 class="text-2xl font-bold text-dark">Gestão de Inventário</h3>
+            <button class="bg-primary hover:bg-primary-dark text-dark font-bold py-2 px-4 rounded-lg transition-colors duration-300 flex items-center">
+              <i class="fas fa-sync-alt mr-2"></i>
+              Atualizar Estoque
+            </button>
+          </div>
+          
+          <!-- Alertas de Estoque -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-white rounded-2xl shadow-md p-6 border-l-4 border-red-500">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-text-secondary text-sm">Produtos Esgotados</p>
+                  <h3 class="text-2xl font-bold text-dark mt-1">3</h3>
+                </div>
+                <div class="bg-red-100 p-3 rounded-full">
+                  <i class="fas fa-exclamation-triangle text-red-500 text-xl"></i>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-md p-6 border-l-4 border-yellow-500">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-text-secondary text-sm">Estoque Baixo</p>
+                  <h3 class="text-2xl font-bold text-dark mt-1">7</h3>
+                </div>
+                <div class="bg-yellow-100 p-3 rounded-full">
+                  <i class="fas fa-exclamation-circle text-yellow-500 text-xl"></i>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-md p-6 border-l-4 border-green-500">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-text-secondary text-sm">Total em Estoque</p>
+                  <h3 class="text-2xl font-bold text-dark mt-1">Kz 4.2M</h3>
+                </div>
+                <div class="bg-green-100 p-3 rounded-full">
+                  <i class="fas fa-boxes text-green-500 text-xl"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Tabela de Inventário -->
+          <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="bg-gray-50">
+                    <th class="text-left py-4 px-6 font-medium text-gray-700">Produto</th>
+                    <th class="text-left py-4 px-6 font-medium text-gray-700">SKU</th>
+                    <th class="text-left py-4 px-6 font-medium text-gray-700">Estoque Atual</th>
+                    <th class="text-left py-4 px-6 font-medium text-gray-700">Estoque Mínimo</th>
+                    <th class="text-left py-4 px-6 font-medium text-gray-700">Status</th>
+                    <th class="text-left py-4 px-6 font-medium text-gray-700">Valor Estoque</th>
+                    <th class="text-left py-4 px-6 font-medium text-gray-700">Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Item 1 -->
+                  <tr class="table-row border-b border-gray-100">
+                    <td class="py-4 px-6 font-medium">Relógio NIBOSI Azul</td>
+                    <td class="py-4 px-6 text-text-secondary">NIB-AZ-001</td>
+                    <td class="py-4 px-6">24</td>
+                    <td class="py-4 px-6">10</td>
+                    <td class="py-4 px-6">
+                      <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">Normal</span>
+                    </td>
+                    <td class="py-4 px-6 font-bold">Kz 360.000</td>
+                    <td class="py-4 px-6">
+                      <button class="text-primary hover:text-primary-dark transition-colors duration-200">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  
+                  <!-- Item 2 -->
+                  <tr class="table-row border-b border-gray-100">
+                    <td class="py-4 px-6 font-medium">Pulseira Couro Preto</td>
+                    <td class="py-4 px-6 text-text-secondary">PUL-CP-001</td>
+                    <td class="py-4 px-6">0</td>
+                    <td class="py-4 px-6">5</td>
+                    <td class="py-4 px-6">
+                      <span class="bg-red-100 text-red-800 text-xs font-medium px-2 py-1 rounded-full">Esgotado</span>
+                    </td>
+                    <td class="py-4 px-6 font-bold">Kz 0</td>
+                    <td class="py-4 px-6">
+                      <button class="text-primary hover:text-primary-dark transition-colors duration-200">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  
+                  <!-- Item 3 -->
+                  <tr class="table-row border-b border-gray-100">
+                    <td class="py-4 px-6 font-medium">Anel Masculino Prata</td>
+                    <td class="py-4 px-6 text-text-secondary">ANEL-PR-001</td>
+                    <td class="py-4 px-6">8</td>
+                    <td class="py-4 px-6">10</td>
+                    <td class="py-4 px-6">
+                      <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2 py-1 rounded-full">Baixo</span>
+                    </td>
+                    <td class="py-4 px-6 font-bold">Kz 34.000</td>
+                    <td class="py-4 px-6">
+                      <button class="text-primary hover:text-primary-dark transition-colors duration-200">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  
+                  <!-- Item 4 -->
+                  <tr class="table-row border-b border-gray-100">
+                    <td class="py-4 px-6 font-medium">Dior Sauvage</td>
+                    <td class="py-4 px-6 text-text-secondary">DIOR-SV-001</td>
+                    <td class="py-4 px-6">15</td>
+                    <td class="py-4 px-6">8</td>
+                    <td class="py-4 px-6">
+                      <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">Normal</span>
+                    </td>
+                    <td class="py-4 px-6 font-bold">Kz 375.000</td>
+                    <td class="py-4 px-6">
+                      <button class="text-primary hover:text-primary-dark transition-colors duration-200">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  
+                  <!-- Item 5 -->
+                  <tr class="table-row">
+                    <td class="py-4 px-6 font-medium">Carteira Couro Marrom</td>
+                    <td class="py-4 px-6 text-text-secondary">CAR-CM-001</td>
+                    <td class="py-4 px-6">32</td>
+                    <td class="py-4 px-6">15</td>
+                    <td class="py-4 px-6">
+                      <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">Normal</span>
+                    </td>
+                    <td class="py-4 px-6 font-bold">Kz 400.000</td>
+                    <td class="py-4 px-6">
+                      <button class="text-primary hover:text-primary-dark transition-colors duration-200">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        </main>

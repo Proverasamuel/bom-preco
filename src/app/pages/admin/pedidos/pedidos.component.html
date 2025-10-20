@@ -1,0 +1,452 @@
+   <!-- Header -->
+      <header class="bg-white border-b border-gray-200 py-4 px-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-4">
+            <button class="text-gray-500 hover:text-dark lg:hidden">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+            <h2 class="text-xl font-bold text-dark" id="pageTitle">Gestão de Pedidos</h2>
+          </div>
+          
+          <div class="flex items-center space-x-4">
+            <div class="text-sm text-gray-500">
+              <i class="fas fa-calendar-alt mr-2"></i>
+              <span id="currentDate">20 de Novembro, 2025</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      
+      <!-- Conteúdo da Página de Pedidos -->
+      <main class="flex-1 overflow-y-auto p-6">
+        <div id="pedidos" class="page-content active">
+          <!-- Estatísticas Rápidas -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div class="bg-white rounded-2xl shadow-md p-6 border-l-4 border-blue-500">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-text-secondary text-sm">Pedidos Hoje</p>
+                  <h3 class="text-2xl font-bold text-dark mt-1">8</h3>
+                  <p class="text-green-500 text-sm mt-2">
+                    <i class="fas fa-arrow-up mr-1"></i>
+                    <span>+2 vs ontem</span>
+                  </p>
+                </div>
+                <div class="bg-blue-100 p-3 rounded-full">
+                  <i class="fas fa-shopping-cart text-blue-500 text-xl"></i>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-md p-6 border-l-4 border-green-500">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-text-secondary text-sm">Pedidos Este Mês</p>
+                  <h3 class="text-2xl font-bold text-dark mt-1">184</h3>
+                  <p class="text-green-500 text-sm mt-2">
+                    <i class="fas fa-arrow-up mr-1"></i>
+                    <span>+15% vs mês passado</span>
+                  </p>
+                </div>
+                <div class="bg-green-100 p-3 rounded-full">
+                  <i class="fas fa-chart-line text-green-500 text-xl"></i>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-md p-6 border-l-4 border-yellow-500">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-text-secondary text-sm">Aguardando Processamento</p>
+                  <h3 class="text-2xl font-bold text-dark mt-1">12</h3>
+                  <p class="text-red-500 text-sm mt-2">
+                    <i class="fas fa-clock mr-1"></i>
+                    <span>Precisam de atenção</span>
+                  </p>
+                </div>
+                <div class="bg-yellow-100 p-3 rounded-full">
+                  <i class="fas fa-exclamation-circle text-yellow-500 text-xl"></i>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-md p-6 border-l-4 border-purple-500">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-text-secondary text-sm">Valor Total (Mês)</p>
+                  <h3 class="text-2xl font-bold text-dark mt-1">Kz 2.8M</h3>
+                  <p class="text-green-500 text-sm mt-2">
+                    <i class="fas fa-arrow-up mr-1"></i>
+                    <span>+12.5% vs mês passado</span>
+                  </p>
+                </div>
+                <div class="bg-purple-100 p-3 rounded-full">
+                  <i class="fas fa-dollar-sign text-purple-500 text-xl"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Filtros e Ações -->
+          <div class="bg-white rounded-2xl shadow-md p-6 mb-6">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+              <div class="flex flex-col sm:flex-row gap-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Status</label>
+                  <select class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                    <option>Todos os Status</option>
+                    <option>Pendente</option>
+                    <option>Confirmado</option>
+                    <option>Processando</option>
+                    <option>Enviado</option>
+                    <option>Entregue</option>
+                    <option>Cancelado</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Data</label>
+                  <select class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                    <option>Últimos 7 dias</option>
+                    <option>Hoje</option>
+                    <option>Este mês</option>
+                    <option>Mês passado</option>
+                    <option>Personalizado</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Cliente</label>
+                  <select class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                    <option>Todos os Clientes</option>
+                    <option>João Silva</option>
+                    <option>Maria Santos</option>
+                    <option>Carlos Oliveira</option>
+                    <option>Ana Pereira</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="flex gap-2">
+                <button class="bg-gray-200 hover:bg-gray-300 text-dark font-bold py-2 px-4 rounded-lg transition-colors duration-300 flex items-center">
+                  <i class="fas fa-filter mr-2"></i>
+                  Filtrar
+                </button>
+                <button class="bg-primary hover:bg-primary-dark text-dark font-bold py-2 px-4 rounded-lg transition-colors duration-300 flex items-center">
+                  <i class="fas fa-download mr-2"></i>
+                  Exportar
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Tabela de Pedidos -->
+          <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="bg-gray-50">
+                    <th class="text-left py-4 px-6 font-medium text-gray-700">
+                      <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary">
+                    </th>
+                    <th class="text-left py-4 px-6 font-medium text-gray-700">Pedido</th>
+                    <th class="text-left py-4 px-6 font-medium text-gray-700">Cliente</th>
+                    <th class="text-left py-4 px-6 font-medium text-gray-700">Data</th>
+                    <th class="text-left py-4 px-6 font-medium text-gray-700">Valor</th>
+                    <th class="text-left py-4 px-6 font-medium text-gray-700">Status</th>
+                    <th class="text-left py-4 px-6 font-medium text-gray-700">Pagamento</th>
+                    <th class="text-left py-4 px-6 font-medium text-gray-700">Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Pedido 1 -->
+                  <tr class="table-row border-b border-gray-100">
+                    <td class="py-4 px-6">
+                      <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary">
+                    </td>
+                    <td class="py-4 px-6">
+                      <div>
+                        <p class="font-medium text-dark">#ORD-7842</p>
+                        <p class="text-text-secondary text-sm">3 itens</p>
+                      </div>
+                    </td>
+                    <td class="py-4 px-6">
+                      <div>
+                        <p class="font-medium text-dark">João Silva</p>
+                        <p class="text-text-secondary text-sm">joao"&#64;email.com</p>
+                      </div>
+                    </td>
+                    <td class="py-4 px-6">
+                      <div>
+                        <p class="font-medium text-dark">19/11/2025</p>
+                        <p class="text-text-secondary text-sm">14:30</p>
+                      </div>
+                    </td>
+                    <td class="py-4 px-6 font-bold text-dark">Kz 85.000</td>
+                    <td class="py-4 px-6">
+                      <span class="order-status-delivered text-xs font-medium px-2 py-1 rounded-full">Entregue</span>
+                    </td>
+                    <td class="py-4 px-6">
+                      <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">Pago</span>
+                    </td>
+                    <td class="py-4 px-6">
+                      <div class="flex space-x-2">
+                        <button class="text-blue-500 hover:text-blue-700 transition-colors duration-200" title="Ver Detalhes">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="text-green-500 hover:text-green-700 transition-colors duration-200" title="Imprimir">
+                          <i class="fas fa-print"></i>
+                        </button>
+                        <button class="text-purple-500 hover:text-purple-700 transition-colors duration-200" title="Rastrear">
+                          <i class="fas fa-truck"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  
+                  <!-- Pedido 2 -->
+                  <tr class="table-row border-b border-gray-100">
+                    <td class="py-4 px-6">
+                      <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary">
+                    </td>
+                    <td class="py-4 px-6">
+                      <div>
+                        <p class="font-medium text-dark">#ORD-7841</p>
+                        <p class="text-text-secondary text-sm">2 itens</p>
+                      </div>
+                    </td>
+                    <td class="py-4 px-6">
+                      <div>
+                        <p class="font-medium text-dark">Maria Santos</p>
+                        <p class="text-text-secondary text-sm">maria"&#64;email.com</p>
+                      </div>
+                    </td>
+                    <td class="py-4 px-6">
+                      <div>
+                        <p class="font-medium text-dark">19/11/2025</p>
+                        <p class="text-text-secondary text-sm">11:15</p>
+                      </div>
+                    </td>
+                    <td class="py-4 px-6 font-bold text-dark">Kz 125.000</td>
+                    <td class="py-4 px-6">
+                      <span class="order-status-shipped text-xs font-medium px-2 py-1 rounded-full">Enviado</span>
+                    </td>
+                    <td class="py-4 px-6">
+                      <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">Pago</span>
+                    </td>
+                    <td class="py-4 px-6">
+                      <div class="flex space-x-2">
+                        <button class="text-blue-500 hover:text-blue-700 transition-colors duration-200" title="Ver Detalhes">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="text-green-500 hover:text-green-700 transition-colors duration-200" title="Imprimir">
+                          <i class="fas fa-print"></i>
+                        </button>
+                        <button class="text-purple-500 hover:text-purple-700 transition-colors duration-200" title="Rastrear">
+                          <i class="fas fa-truck"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  
+                  <!-- Pedido 3 -->
+                  <tr class="table-row border-b border-gray-100">
+                    <td class="py-4 px-6">
+                      <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary">
+                    </td>
+                    <td class="py-4 px-6">
+                      <div>
+                        <p class="font-medium text-dark">#ORD-7840</p>
+                        <p class="text-text-secondary text-sm">1 item</p>
+                      </div>
+                    </td>
+                    <td class="py-4 px-6">
+                      <div>
+                        <p class="font-medium text-dark">Carlos Oliveira</p>
+                        <p class="text-text-secondary text-sm">carlos"&#64;email.com</p>
+                      </div>
+                    </td>
+                    <td class="py-4 px-6">
+                      <div>
+                        <p class="font-medium text-dark">18/11/2025</p>
+                        <p class="text-text-secondary text-sm">16:45</p>
+                      </div>
+                    </td>
+                    <td class="py-4 px-6 font-bold text-dark">Kz 64.500</td>
+                    <td class="py-4 px-6">
+                      <span class="order-status-processing text-xs font-medium px-2 py-1 rounded-full">Processando</span>
+                    </td>
+                    <td class="py-4 px-6">
+                      <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">Pago</span>
+                    </td>
+                    <td class="py-4 px-6">
+                      <div class="flex space-x-2">
+                        <button class="text-blue-500 hover:text-blue-700 transition-colors duration-200" title="Ver Detalhes">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="text-green-500 hover:text-green-700 transition-colors duration-200" title="Imprimir">
+                          <i class="fas fa-print"></i>
+                        </button>
+                        <button class="text-yellow-500 hover:text-yellow-700 transition-colors duration-200" title="Processar">
+                          <i class="fas fa-cog"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  
+                  <!-- Pedido 4 -->
+                  <tr class="table-row border-b border-gray-100">
+                    <td class="py-4 px-6">
+                      <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary">
+                    </td>
+                    <td class="py-4 px-6">
+                      <div>
+                        <p class="font-medium text-dark">#ORD-7839</p>
+                        <p class="text-text-secondary text-sm">4 itens</p>
+                      </div>
+                    </td>
+                    <td class="py-4 px-6">
+                      <div>
+                        <p class="font-medium text-dark">Ana Pereira</p>
+                        <p class="text-text-secondary text-sm">ana"&#64;email.com</p>
+                      </div>
+                    </td>
+                    <td class="py-4 px-6">
+                      <div>
+                        <p class="font-medium text-dark">18/11/2025</p>
+                        <p class="text-text-secondary text-sm">09:20</p>
+                      </div>
+                    </td>
+                    <td class="py-4 px-6 font-bold text-dark">Kz 92.000</td>
+                    <td class="py-4 px-6">
+                      <span class="order-status-confirmed text-xs font-medium px-2 py-1 rounded-full">Confirmado</span>
+                    </td>
+                    <td class="py-4 px-6">
+                      <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">Pago</span>
+                    </td>
+                    <td class="py-4 px-6">
+                      <div class="flex space-x-2">
+                        <button class="text-blue-500 hover:text-blue-700 transition-colors duration-200" title="Ver Detalhes">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="text-green-500 hover:text-green-700 transition-colors duration-200" title="Imprimir">
+                          <i class="fas fa-print"></i>
+                        </button>
+                        <button class="text-yellow-500 hover:text-yellow-700 transition-colors duration-200" title="Processar">
+                          <i class="fas fa-cog"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  
+                  <!-- Pedido 5 -->
+                  <tr class="table-row">
+                    <td class="py-4 px-6">
+                      <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary">
+                    </td>
+                    <td class="py-4 px-6">
+                      <div>
+                        <p class="font-medium text-dark">#ORD-7838</p>
+                        <p class="text-text-secondary text-sm">2 itens</p>
+                      </div>
+                    </td>
+                    <td class="py-4 px-6">
+                      <div>
+                        <p class="font-medium text-dark">Pedro Costa</p>
+                        <p class="text-text-secondary text-sm">pedro"&#64;email.com</p>
+                      </div>
+                    </td>
+                    <td class="py-4 px-6">
+                      <div>
+                        <p class="font-medium text-dark">17/11/2025</p>
+                        <p class="text-text-secondary text-sm">13:10</p>
+                      </div>
+                    </td>
+                    <td class="py-4 px-6 font-bold text-dark">Kz 156.000</td>
+                    <td class="py-4 px-6">
+                      <span class="order-status-cancelled text-xs font-medium px-2 py-1 rounded-full">Cancelado</span>
+                    </td>
+                    <td class="py-4 px-6">
+                      <span class="bg-red-100 text-red-800 text-xs font-medium px-2 py-1 rounded-full">Estornado</span>
+                    </td>
+                    <td class="py-4 px-6">
+                      <div class="flex space-x-2">
+                        <button class="text-blue-500 hover:text-blue-700 transition-colors duration-200" title="Ver Detalhes">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="text-red-500 hover:text-red-700 transition-colors duration-200" title="Excluir">
+                          <i class="fas fa-trash"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <!-- Paginação e Ações em Lote -->
+            <div class="bg-gray-50 px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div class="flex items-center space-x-4">
+                <select class="border border-gray-300 rounded-lg px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+                  <option>Ações em Lote</option>
+                  <option>Marcar como Processando</option>
+                  <option>Marcar como Enviado</option>
+                  <option>Marcar como Entregue</option>
+                  <option>Cancelar Pedidos</option>
+                  <option>Excluir Pedidos</option>
+                </select>
+                <button class="bg-primary hover:bg-primary-dark text-dark font-bold py-1 px-3 rounded-lg transition-colors duration-300 text-sm">
+                  Aplicar
+                </button>
+              </div>
+              
+              <div class="flex items-center space-x-2">
+                <button class="px-3 py-1 bg-gray-200 rounded-lg text-gray-700 hover:bg-gray-300 text-sm">Anterior</button>
+                <button class="px-3 py-1 bg-primary text-dark rounded-lg font-bold text-sm">1</button>
+                <button class="px-3 py-1 bg-gray-200 rounded-lg text-gray-700 hover:bg-gray-300 text-sm">2</button>
+                <button class="px-3 py-1 bg-gray-200 rounded-lg text-gray-700 hover:bg-gray-300 text-sm">3</button>
+                <button class="px-3 py-1 bg-gray-200 rounded-lg text-gray-700 hover:bg-gray-300 text-sm">Próximo</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Estatísticas de Status -->
+          <div class="mt-8">
+            <h3 class="text-lg font-bold text-dark mb-4">Distribuição por Status</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              <div class="bg-white rounded-2xl shadow-md p-4 text-center">
+                <div class="order-status-pending inline-block px-3 py-1 rounded-full text-xs font-medium mb-2">Pendente</div>
+                <p class="text-2xl font-bold text-dark">5</p>
+              </div>
+              
+              <div class="bg-white rounded-2xl shadow-md p-4 text-center">
+                <div class="order-status-confirmed inline-block px-3 py-1 rounded-full text-xs font-medium mb-2">Confirmado</div>
+                <p class="text-2xl font-bold text-dark">8</p>
+              </div>
+              
+              <div class="bg-white rounded-2xl shadow-md p-4 text-center">
+                <div class="order-status-processing inline-block px-3 py-1 rounded-full text-xs font-medium mb-2">Processando</div>
+                <p class="text-2xl font-bold text-dark">12</p>
+              </div>
+              
+              <div class="bg-white rounded-2xl shadow-md p-4 text-center">
+                <div class="order-status-shipped inline-block px-3 py-1 rounded-full text-xs font-medium mb-2">Enviado</div>
+                <p class="text-2xl font-bold text-dark">15</p>
+              </div>
+              
+              <div class="bg-white rounded-2xl shadow-md p-4 text-center">
+                <div class="order-status-delivered inline-block px-3 py-1 rounded-full text-xs font-medium mb-2">Entregue</div>
+                <p class="text-2xl font-bold text-dark">142</p>
+              </div>
+              
+              <div class="bg-white rounded-2xl shadow-md p-4 text-center">
+                <div class="order-status-cancelled inline-block px-3 py-1 rounded-full text-xs font-medium mb-2">Cancelado</div>
+                <p class="text-2xl font-bold text-dark">2</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+       
+        
+      </main>

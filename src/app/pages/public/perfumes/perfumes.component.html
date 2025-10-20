@@ -1,0 +1,547 @@
+ <!-- Breadcrumb -->
+  <section class="bg-gray-100 py-4">
+    <div class="container mx-auto px-4">
+      <nav class="flex" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+          <li class="inline-flex items-center">
+            <a routerLink="/" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary">
+              <i class="fas fa-home mr-2"></i>
+              Início
+            </a>
+          </li>
+          <li aria-current="page">
+            <div class="flex items-center">
+              <i class="fas fa-chevron-right text-gray-400 mx-2"></i>
+              <span class="ml-1 text-sm font-medium text-gray-500 md:ml-2">Perfumes</span>
+            </div>
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero Perfumes -->
+  <section class="bg-gradient-to-br from-dark to-dark-light text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <h1 class="font-playfair text-4xl md:text-5xl font-bold mb-4">Perfumes Masculinos</h1>
+          <p class="text-text-secondary text-lg mb-6 max-w-lg">Descubra fragrâncias exclusivas que definem a sua personalidade. Aromas marcantes e sofisticados para homens que deixam sua marca por onde passam.</p>
+          <div class="flex items-center space-x-4">
+            <div class="flex items-center">
+              <i class="fas fa-check-circle text-primary mr-2"></i>
+              <span>Fragrâncias Originais</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-check-circle text-primary mr-2"></i>
+              <span>Entrega em Todo Angola</span>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <div class="relative animate-float">
+            <div class="absolute -inset-4 bg-primary rounded-full opacity-20 blur-lg"></div>
+            <img src="https://placehold.co/500x400/0f0f0f/c9a76b?text=Perfumes+Masculinos" alt="Coleção de Perfumes Masculinos" class="relative z-10 rounded-2xl shadow-2xl w-full max-w-md">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filtros Avançados -->
+  <section class="py-8 bg-white border-b">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center">
+        <div class="mb-4 lg:mb-0">
+          <h2 class="text-xl font-bold text-dark">Filtrar Perfumes</h2>
+          <p class="text-text-secondary">Encontre a fragrância perfeita para você</p>
+        </div>
+        
+        <div class="flex flex-wrap gap-4">
+          <!-- Filtro por Tipo de Fragrância -->
+          <div class="relative">
+            <select class="bg-white border border-gray-300 text-dark py-2 pl-4 pr-10 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-primary">
+              <option>Tipo de Fragrância</option>
+              <option>Amadeirado</option>
+              <option>Cítrico</option>
+              <option>Ambarado</option>
+              <option>Fresco</option>
+              <option>Oriental</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          
+          <!-- Filtro por Marca -->
+          <div class="relative">
+            <select class="bg-white border border-gray-300 text-dark py-2 pl-4 pr-10 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-primary">
+              <option>Marca</option>
+              <option>Dior</option>
+              <option>Chanel</option>
+              <option>Paco Rabanne</option>
+              <option>Armani</option>
+              <option>Versace</option>
+              <option>Hugo Boss</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          
+          <!-- Filtro por Preço -->
+          <div class="relative">
+            <select class="bg-white border border-gray-300 text-dark py-2 pl-4 pr-10 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-primary">
+              <option>Faixa de Preço</option>
+              <option>Até Kz 15.000</option>
+              <option>Kz 15.000 - Kz 25.000</option>
+              <option>Kz 25.000 - Kz 40.000</option>
+              <option>Acima de Kz 40.000</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          
+          <!-- Filtro por Ocasião -->
+          <div class="relative">
+            <select class="bg-white border border-gray-300 text-dark py-2 pl-4 pr-10 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-primary">
+              <option>Ocasião</option>
+              <option>Dia a Dia</option>
+              <option>Noite/Eventos</option>
+              <option>Profissional</option>
+              <option>Romântico</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          
+          <!-- Botão Limpar Filtros -->
+          <button class="bg-gray-200 hover:bg-gray-300 text-dark py-2 px-4 rounded-lg transition-colors duration-300">
+            <i class="fas fa-times mr-2"></i>
+            Limpar
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categorias de Perfumes -->
+  <section class="py-8 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="font-playfair text-3xl font-bold text-dark text-center mb-2">Famílias Olfativas</h2>
+      <p class="text-text-secondary text-center mb-8 max-w-2xl mx-auto">Explore os diferentes tipos de fragrâncias e encontre o aroma que combina com seu estilo</p>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <!-- Categoria 1 -->
+        <a href="#" class="bg-white rounded-2xl p-6 text-center shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:bg-opacity-20 transition-colors duration-300">
+            <i class="fas fa-tree text-2xl text-primary"></i>
+          </div>
+          <h3 class="font-bold text-dark mb-2">Amadeirados</h3>
+          <p class="text-text-secondary text-sm">Aromas quentes e terrosos</p>
+        </a>
+        
+        <!-- Categoria 2 -->
+        <a href="#" class="bg-white rounded-2xl p-6 text-center shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:bg-opacity-20 transition-colors duration-300">
+            <i class="fas fa-lemon text-2xl text-primary"></i>
+          </div>
+          <h3 class="font-bold text-dark mb-2">Cítricos</h3>
+          <p class="text-text-secondary text-sm">Frescos e energizantes</p>
+        </a>
+        
+        <!-- Categoria 3 -->
+        <a href="#" class="bg-white rounded-2xl p-6 text-center shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:bg-opacity-20 transition-colors duration-300">
+            <i class="fas fa-wind text-2xl text-primary"></i>
+          </div>
+          <h3 class="font-bold text-dark mb-2">Aquáticos</h3>
+          <p class="text-text-secondary text-sm">Leves e refrescantes</p>
+        </a>
+        
+        <!-- Categoria 4 -->
+        <a href="#" class="bg-white rounded-2xl p-6 text-center shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:bg-opacity-20 transition-colors duration-300">
+            <i class="fas fa-fire text-2xl text-primary"></i>
+          </div>
+          <h3 class="font-bold text-dark mb-2">Orientais</h3>
+          <p class="text-text-secondary text-sm">Exóticos e intensos</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produtos - Perfumes -->
+  <section class="py-16 bg-gradient-to-br from-dark to-dark-light text-white">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+        <div>
+          <h2 class="font-playfair text-3xl md:text-4xl font-bold text-primary mb-2">Nossa Coleção</h2>
+          <p class="text-text-secondary">Fragrâncias selecionadas para homens sofisticados</p>
+        </div>
+        
+        <div class="mt-4 md:mt-0 flex items-center space-x-4">
+          <span class="text-text-secondary">Ordenar por:</span>
+          <select class="bg-dark-light border border-primary text-white py-2 pl-4 pr-10 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-primary">
+            <option>Mais Relevantes</option>
+            <option>Preço: Menor ao Maior</option>
+            <option>Preço: Maior ao Menor</option>
+            <option>Mais Vendidos</option>
+            <option>Melhor Avaliados</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Perfume 1 -->
+        <div class="fragrance-card rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="relative overflow-hidden">
+            <img src="https://placehold.co/300x300/1a1a1a/c9a76b?text=Sauvage" alt="Perfume Dior Sauvage" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute top-4 right-4 bg-primary text-dark font-bold py-1 px-3 rounded-full text-sm">
+              Mais Vendido
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-playfair text-xl font-bold text-white mb-2">Dior Sauvage</h3>
+            <p class="text-text-secondary text-sm mb-4">Notas amadeiradas e frescas com toque de pimenta e lavanda</p>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="text-sm text-text-secondary">(67)</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-2xl font-bold text-white">Kz 25.000</span>
+              </div>
+              <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Perfume 2 -->
+        <div class="fragrance-card rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="relative overflow-hidden">
+            <img src="https://placehold.co/300x300/1a1a1a/c9a76b?text=Bleu+de+Chanel" alt="Perfume Bleu de Chanel" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-6">
+            <h3 class="font-playfair text-xl font-bold text-white mb-2">Bleu de Chanel</h3>
+            <p class="text-text-secondary text-sm mb-4">Fragrância amadeirada aromática com notas de gengibre e sândalo</p>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="text-sm text-text-secondary">(52)</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-2xl font-bold text-white">Kz 32.000</span>
+              </div>
+              <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Perfume 3 -->
+        <div class="fragrance-card rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="relative overflow-hidden">
+            <img src="https://placehold.co/300x300/1a1a1a/c9a76b?text=Acqua+di+Gio" alt="Perfume Acqua di Gio" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute top-4 right-4 bg-red-500 text-white font-bold py-1 px-3 rounded-full text-sm">
+              Novo
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-playfair text-xl font-bold text-white mb-2">Acqua di Gio</h3>
+            <p class="text-text-secondary text-sm mb-4">Aromas aquáticos e frescos com notas marinhas e néroli</p>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <span class="text-sm text-text-secondary">(38)</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-2xl font-bold text-white">Kz 22.500</span>
+              </div>
+              <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Perfume 4 -->
+        <div class="fragrance-card rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="relative overflow-hidden">
+            <img src="https://placehold.co/300x300/1a1a1a/c9a76b?text=Invictus" alt="Perfume Paco Rabanne Invictus" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute top-4 right-4 bg-primary text-dark font-bold py-1 px-3 rounded-full text-sm">
+              -10%
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-playfair text-xl font-bold text-white mb-2">Paco Rabanne Invictus</h3>
+            <p class="text-text-secondary text-sm mb-4">Energético e vitorioso com notas de grapefruit e folha de louro</p>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="text-sm text-text-secondary">(45)</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-2xl font-bold text-white">Kz 18.000</span>
+                <span class="text-sm text-text-secondary line-through ml-2">Kz 20.000</span>
+              </div>
+              <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Perfume 5 -->
+        <div class="fragrance-card rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="relative overflow-hidden">
+            <img src="https://placehold.co/300x300/1a1a1a/c9a76b?text=Armani+Code" alt="Perfume Armani Code" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-6">
+            <h3 class="font-playfair text-xl font-bold text-white mb-2">Armani Code</h3>
+            <p class="text-text-secondary text-sm mb-4">Aromático amadeirado com notas de bergamota e baunilha</p>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <span class="text-sm text-text-secondary">(41)</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-2xl font-bold text-white">Kz 26.500</span>
+              </div>
+              <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Perfume 6 -->
+        <div class="fragrance-card rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="relative overflow-hidden">
+            <img src="https://placehold.co/300x300/1a1a1a/c9a76b?text=Versace+Eros" alt="Perfume Versace Eros" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute top-4 right-4 bg-primary text-dark font-bold py-1 px-3 rounded-full text-sm">
+              -15%
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-playfair text-xl font-bold text-white mb-2">Versace Eros</h3>
+            <p class="text-text-secondary text-sm mb-4">Aromático fresco com notas de menta e maçã verde</p>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="text-sm text-text-secondary">(56)</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-2xl font-bold text-white">Kz 21.000</span>
+                <span class="text-sm text-text-secondary line-through ml-2">Kz 24.700</span>
+              </div>
+              <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Perfume 7 -->
+        <div class="fragrance-card rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="relative overflow-hidden">
+            <img src="https://placehold.co/300x300/1a1a1a/c9a76b?text=Hugo+Boss+Bottled" alt="Perfume Hugo Boss Bottled" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-6">
+            <h3 class="font-playfair text-xl font-bold text-white mb-2">Hugo Boss Bottled</h3>
+            <p class="text-text-secondary text-sm mb-4">Amadeirado frutado com notas de maçã e canela</p>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <span class="text-sm text-text-secondary">(39)</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-2xl font-bold text-white">Kz 19.800</span>
+              </div>
+              <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Perfume 8 -->
+        <div class="fragrance-card rounded-2xl shadow-md overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl group">
+          <div class="relative overflow-hidden">
+            <img src="https://placehold.co/300x300/1a1a1a/c9a76b?text=Jean+Paul+Gaultier" alt="Perfume Jean Paul Gaultier" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute top-4 right-4 bg-red-500 text-white font-bold py-1 px-3 rounded-full text-sm">
+              Novo
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-playfair text-xl font-bold text-white mb-2">Jean Paul Gaultier</h3>
+            <p class="text-text-secondary text-sm mb-4">Âmbar baunilhado com notas de cardamomo e iris</p>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="text-sm text-text-secondary">(28)</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-2xl font-bold text-white">Kz 29.500</span>
+              </div>
+              <button class="bg-primary hover:bg-primary-dark text-dark p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Paginação -->
+      <div class="flex justify-center mt-12">
+        <nav class="flex items-center space-x-2">
+          <a href="#" class="px-3 py-2 rounded-lg bg-primary text-dark font-bold">1</a>
+          <a href="#" class="px-3 py-2 rounded-lg bg-dark-light hover:bg-gray-700 text-white transition-colors duration-300">2</a>
+          <a href="#" class="px-3 py-2 rounded-lg bg-dark-light hover:bg-gray-700 text-white transition-colors duration-300">3</a>
+          <a href="#" class="px-3 py-2 rounded-lg bg-dark-light hover:bg-gray-700 text-white transition-colors duration-300">
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guia de Fragrâncias -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="font-playfair text-3xl md:text-4xl font-bold text-dark mb-4">Guia de Fragrâncias</h2>
+        <p class="text-text-secondary max-w-2xl mx-auto">Aprenda a escolher o perfume perfeito para cada ocasião</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Guia 1 -->
+        <div class="bg-gray-50 p-6 rounded-2xl text-center transition-all duration-300 hover:shadow-lg">
+          <div class="bg-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-briefcase text-2xl text-dark"></i>
+          </div>
+          <h3 class="font-bold text-dark mb-2">Para o Trabalho</h3>
+          <p class="text-text-secondary text-sm">Fragrâncias discretas e sofisticadas como Bleu de Chanel ou Acqua di Gio.</p>
+        </div>
+        
+        <!-- Guia 2 -->
+        <div class="bg-gray-50 p-6 rounded-2xl text-center transition-all duration-300 hover:shadow-lg">
+          <div class="bg-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-moon text-2xl text-dark"></i>
+          </div>
+          <h3 class="font-bold text-dark mb-2">Para a Noite</h3>
+          <p class="text-text-secondary text-sm">Fragrâncias intensas e marcantes como Dior Sauvage ou Armani Code.</p>
+        </div>
+        
+        <!-- Guia 3 -->
+        <div class="bg-gray-50 p-6 rounded-2xl text-center transition-all duration-300 hover:shadow-lg">
+          <div class="bg-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-heart text-2xl text-dark"></i>
+          </div>
+          <h3 class="font-bold text-dark mb-2">Encontros Românticos</h3>
+          <p class="text-text-secondary text-sm">Fragrâncias sedutoras como Versace Eros ou Jean Paul Gaultier.</p>
+        </div>
+        
+        <!-- Guia 4 -->
+        <div class="bg-gray-50 p-6 rounded-2xl text-center transition-all duration-300 hover:shadow-lg">
+          <div class="bg-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-sun text-2xl text-dark"></i>
+          </div>
+          <h3 class="font-bold text-dark mb-2">Dia a Dia</h3>
+          <p class="text-text-secondary text-sm">Fragrâncias frescas e versáteis como Paco Rabanne Invictus ou Hugo Boss.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dicas de Aplicação -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="font-playfair text-3xl md:text-4xl font-bold text-dark mb-4">Dicas de Aplicação</h2>
+        <p class="text-text-secondary max-w-2xl mx-auto">Aprenda a usar seu perfume para maximizar sua duração e projeção</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Dica 1 -->
+        <div class="bg-white p-6 rounded-2xl shadow-md text-center transition-all duration-300 hover:shadow-lg">
+          <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-pulse text-2xl text-primary"></i>
+          </div>
+          <h3 class="font-bold text-dark mb-2">Pontos de Pulso</h3>
+          <p class="text-text-secondary">Aplique nos pulsos e atrás das orelhas onde a circulação sanguínea aquece a fragrância.</p>
+        </div>
+        
+        <!-- Dica 2 -->
+        <div class="bg-white p-6 rounded-2xl shadow-md text-center transition-all duration-300 hover:shadow-lg">
+          <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-tshirt text-2xl text-primary"></i>
+          </div>
+          <h3 class="font-bold text-dark mb-2">Nas Roupas</h3>
+          <p class="text-text-secondary">Aplique levemente nas roupas para que a fragrância dure mais tempo durante o dia.</p>
+        </div>
+        
+        <!-- Dica 3 -->
+        <div class="bg-white p-6 rounded-2xl shadow-md text-center transition-all duration-300 hover:shadow-lg">
+          <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-wind text-2xl text-primary"></i>
+          </div>
+          <h3 class="font-bold text-dark mb-2">Não Esfregue</h3>
+          <p class="text-text-secondary">Depois de aplicar, não esfregue os pulsos - isso quebra as moléculas do perfume.</p>
+        </div>
+      </div>
+    </div>
+  </section>
