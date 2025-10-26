@@ -1,135 +1,217 @@
-<div class="font-inter bg-content text-gray-900 overflow-hidden">
-    <!-- Layout Principal -->
-    <div class="flex h-screen">
-        <!-- Sidebar -->
-        <div class="w-64 bg-sidebar text-white flex flex-col">
-            <!-- Logo -->
-            <div class="p-6 border-b border-gray-800">
-                <h1 class="font-playfair text-2xl font-bold text-primary">BOM_PREÇO</h1>
-                <p class="text-text-secondary text-sm mt-1">Painel Administrativo</p>
-            </div>
+<div class="font-inter bg-content text-gray-900 h-screen overflow-hidden">
+  <!-- Layout Principal -->
+  <div class="flex h-full">
 
-            <!-- Menu de Navegação -->
-            <nav class="flex-1 p-4 space-y-2">
-                <!-- Dashboard -->
-                <a href="#"
-                    class="sidebar-item active flex items-center space-x-3 p-3 rounded-lg transition-colors duration-200">
-                    <i class="fas fa-tachometer-alt w-5 text-text-secondary"></i>
-                    <span>Dashboard</span>
-                </a>
-
-                <!-- Produtos -->
-                <div class="relative">
-                    <a href="#"
-                        class="sidebar-item flex items-center justify-between p-3 rounded-lg transition-colors duration-200">
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-boxes w-5 text-text-secondary"></i>
-                            <span>Produtos</span>
-                        </div>
-                        <i class="fas fa-chevron-down text-xs text-text-secondary"></i>
-                    </a>
-                    <!-- Submenu Produtos -->
-                    <div class="ml-6 mt-1 space-y-1 hidden">
-                        <a href="#"
-                            class="block py-2 px-3 text-sm text-text-secondary hover:text-white rounded transition-colors duration-200">
-                            Todos os Produtos
-                        </a>
-                        <a href="#"
-                            class="block py-2 px-3 text-sm text-text-secondary hover:text-white rounded transition-colors duration-200">
-                            Adicionar Produto
-                        </a>
-                        <a href="#"
-                            class="block py-2 px-3 text-sm text-text-secondary hover:text-white rounded transition-colors duration-200">
-                            Categorias
-                        </a>
-                        <a href="#"
-                            class="block py-2 px-3 text-sm text-text-secondary hover:text-white rounded transition-colors duration-200">
-                            Inventário
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Pedidos -->
-                <a href="#"
-                    class="sidebar-item flex items-center space-x-3 p-3 rounded-lg transition-colors duration-200">
-                    <i class="fas fa-shopping-cart w-5 text-text-secondary"></i>
-                    <span>Pedidos</span>
-                    <span class="ml-auto bg-primary text-dark text-xs font-bold px-2 py-1 rounded-full">12</span>
-                </a>
-
-                <!-- Clientes -->
-                <a href="#"
-                    class="sidebar-item flex items-center space-x-3 p-3 rounded-lg transition-colors duration-200">
-                    <i class="fas fa-users w-5 text-text-secondary"></i>
-                    <span>Clientes</span>
-                </a>
-
-                <!-- Relatórios -->
-                <a href="#"
-                    class="sidebar-item flex items-center space-x-3 p-3 rounded-lg transition-colors duration-200">
-                    <i class="fas fa-chart-bar w-5 text-text-secondary"></i>
-                    <span>Relatórios</span>
-                </a>
-
-                <!-- Marketing -->
-                <a href="#"
-                    class="sidebar-item flex items-center space-x-3 p-3 rounded-lg transition-colors duration-200">
-                    <i class="fas fa-bullhorn w-5 text-text-secondary"></i>
-                    <span>Marketing</span>
-                </a>
-
-                <!-- Configurações -->
-                <div class="relative">
-                    <a href="#"
-                        class="sidebar-item flex items-center justify-between p-3 rounded-lg transition-colors duration-200">
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-cog w-5 text-text-secondary"></i>
-                            <span>Configurações</span>
-                        </div>
-                        <i class="fas fa-chevron-down text-xs text-text-secondary"></i>
-                    </a>
-                    <!-- Submenu Configurações -->
-                    <div class="ml-6 mt-1 space-y-1 hidden">
-                        <a href="#"
-                            class="block py-2 px-3 text-sm text-text-secondary hover:text-white rounded transition-colors duration-200">
-                            Geral
-                        </a>
-                        <a href="#"
-                            class="block py-2 px-3 text-sm text-text-secondary hover:text-white rounded transition-colors duration-200">
-                            Pagamentos
-                        </a>
-                        <a href="#"
-                            class="block py-2 px-3 text-sm text-text-secondary hover:text-white rounded transition-colors duration-200">
-                            Entregas
-                        </a>
-                        <a href="#"
-                            class="block py-2 px-3 text-sm text-text-secondary hover:text-white rounded transition-colors duration-200">
-                            Usuários
-                        </a>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- Usuário -->
-            <div class="p-4 border-t border-gray-800">
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                        <span class="font-bold text-dark">A</span>
-                    </div>
-                    <div class="flex-1 min-w-0">
-                        <p class="text-sm font-medium truncate">Administrador</p>
-                        <p class="text-xs text-text-secondary truncate">admin"&#64;bompreco.com</p>
-                    </div>
-                    <button class="text-text-secondary hover:text-white transition-colors duration-200">
-                        <i class="fas fa-sign-out-alt"></i>
-                    </button>
-                </div>
-            </div>
+    <!-- Sidebar (fixo em telas grandes, offcanvas em pequenas) -->
+    <div
+      class="fixed md:static inset-y-0 left-0 z-40 w-64 bg-sidebar text-white flex flex-col transform md:translate-x-0 transition-transform duration-300 ease-in-out"
+      [class.-translate-x-full]="!isSidebarOpen"
+    >
+      <!-- Logo -->
+      <div class="p-6 border-b border-gray-800 flex items-center justify-between">
+        <div>
+          <h1 class="font-playfair text-2xl font-bold text-primary">BOM_PREÇO</h1>
+          <p class="text-text-secondary text-sm mt-1">Painel Administrativo</p>
         </div>
 
-        <!-- Conteúdo Principal -->
-        <div class="flex-1 flex flex-col overflow-hidden">
-            <router-outlet></router-outlet>
+        <!-- Botão de fechar (só aparece no mobile) -->
+        <button
+          class="md:hidden text-text-secondary hover:text-white"
+          (click)="isSidebarOpen = false"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <!-- Menu de Navegação -->
+      <nav class="flex-1 p-4 space-y-2 overflow-y-auto">
+        <!-- Dashboard -->
+        <a
+          routerLink="/admin/dashboard"
+          routerLinkActive="active"
+          class="sidebar-item flex items-center space-x-3 p-3 rounded-lg transition-colors duration-200"
+          (click)="closeSidebarOnMobile()"
+        >
+          <i class="fas fa-tachometer-alt w-5 text-text-secondary"></i>
+          <span>Dashboard</span>
+        </a>
+
+        <!-- Produtos -->
+        <div class="relative">
+          <button
+            type="button"
+            class="w-full sidebar-item flex items-center justify-between p-3 rounded-lg transition-colors duration-200"
+            (click)="toggleMenu('produtos')"
+          >
+            <div class="flex items-center space-x-3">
+              <i class="fas fa-boxes w-5 text-text-secondary"></i>
+              <span>Produtos</span>
+            </div>
+            <i
+              class="fas fa-chevron-down text-xs text-text-secondary transition-transform duration-300"
+              [class.rotate-180]="isOpen('produtos')"
+            ></i>
+          </button>
+
+          <div class="ml-6 mt-1 space-y-1" [class.hidden]="!isOpen('produtos')">
+            <a
+              routerLink="/admin/produtos/todos"
+              routerLinkActive="active"
+              class="block py-2 px-3 text-sm text-text-secondary hover:text-white rounded transition-colors duration-200"
+              (click)="closeSidebarOnMobile()"
+              >Todos os Produtos</a
+            >
+            <a
+              routerLink="/admin/produtos/adicionar"
+              routerLinkActive="active"
+              class="block py-2 px-3 text-sm text-text-secondary hover:text-white rounded transition-colors duration-200"
+              (click)="closeSidebarOnMobile()"
+              >Adicionar Produto</a
+            >
+            <a
+              routerLink="/admin/produtos/categorias"
+              routerLinkActive="active"
+              class="block py-2 px-3 text-sm text-text-secondary hover:text-white rounded transition-colors duration-200"
+              (click)="closeSidebarOnMobile()"
+              >Categorias</a
+            >
+            <a
+              routerLink="/admin/produtos/inventario"
+              routerLinkActive="active"
+              class="block py-2 px-3 text-sm text-text-secondary hover:text-white rounded transition-colors duration-200"
+              (click)="closeSidebarOnMobile()"
+              >Inventário</a
+            >
+          </div>
         </div>
+
+        <!-- Pedidos -->
+        <a
+          routerLink="/admin/pedidos"
+          routerLinkActive="active"
+          class="sidebar-item flex items-center space-x-3 p-3 rounded-lg transition-colors duration-200"
+          (click)="closeSidebarOnMobile()"
+        >
+          <i class="fas fa-shopping-cart w-5 text-text-secondary"></i>
+          <span>Pedidos</span>
+          <span class="ml-auto bg-primary text-dark text-xs font-bold px-2 py-1 rounded-full">12</span>
+        </a>
+
+        <!-- Clientes -->
+        <a
+          routerLink="/admin/clientes"
+          routerLinkActive="active"
+          class="sidebar-item flex items-center space-x-3 p-3 rounded-lg transition-colors duration-200"
+          (click)="closeSidebarOnMobile()"
+        >
+          <i class="fas fa-users w-5 text-text-secondary"></i>
+          <span>Clientes</span>
+        </a>
+
+        <!-- Relatórios -->
+        <a
+          routerLink="/admin/relatorios"
+          routerLinkActive="active"
+          class="sidebar-item flex items-center space-x-3 p-3 rounded-lg transition-colors duration-200"
+          (click)="closeSidebarOnMobile()"
+        >
+          <i class="fas fa-chart-bar w-5 text-text-secondary"></i>
+          <span>Relatórios</span>
+        </a>
+
+        <!-- Marketing -->
+        <a
+          routerLink="/admin/marketing"
+          routerLinkActive="active"
+          class="sidebar-item flex items-center space-x-3 p-3 rounded-lg transition-colors duration-200"
+          (click)="closeSidebarOnMobile()"
+        >
+          <i class="fas fa-bullhorn w-5 text-text-secondary"></i>
+          <span>Marketing</span>
+        </a>
+
+        <!-- Configurações -->
+        <div class="relative">
+          <button
+            type="button"
+            class="w-full sidebar-item flex items-center justify-between p-3 rounded-lg transition-colors duration-200"
+            (click)="toggleMenu('config')"
+          >
+            <div class="flex items-center space-x-3">
+              <i class="fas fa-cog w-5 text-text-secondary"></i>
+              <span>Configurações</span>
+            </div>
+            <i
+              class="fas fa-chevron-down text-xs text-text-secondary transition-transform duration-300"
+              [class.rotate-180]="isOpen('config')"
+            ></i>
+          </button>
+
+          <div class="ml-6 mt-1 space-y-1" [class.hidden]="!isOpen('config')">
+            <a
+              routerLink="/admin/configuracoes/geral"
+              routerLinkActive="active"
+              class="block py-2 px-3 text-sm text-text-secondary hover:text-white rounded transition-colors duration-200"
+              (click)="closeSidebarOnMobile()"
+              >Geral</a
+            >
+            <a
+              routerLink="/admin/configuracoes/pagamentos"
+              routerLinkActive="active"
+              class="block py-2 px-3 text-sm text-text-secondary hover:text-white rounded transition-colors duration-200"
+              (click)="closeSidebarOnMobile()"
+              >Pagamentos</a
+            >
+            <a
+              routerLink="/admin/configuracoes/entregas"
+              routerLinkActive="active"
+              class="block py-2 px-3 text-sm text-text-secondary hover:text-white rounded transition-colors duration-200"
+              (click)="closeSidebarOnMobile()"
+              >Entregas</a
+            >
+            <a
+              routerLink="/admin/configuracoes/usuarios"
+              routerLinkActive="active"
+              class="block py-2 px-3 text-sm text-text-secondary hover:text-white rounded transition-colors duration-200"
+              (click)="closeSidebarOnMobile()"
+              >Usuários</a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <!-- Usuário -->
+      <div class="p-4 border-t border-gray-800">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+            <span class="font-bold text-dark">A</span>
+          </div>
+          <div class="flex-1 min-w-0">
+            <p class="text-sm font-medium truncate">Administrador</p>
+            <p class="text-xs text-text-secondary truncate">admin&#64;bompreco.com</p>
+          </div>
+          <button class="text-text-secondary hover:text-white transition-colors duration-200">
+            <i class="fas fa-sign-out-alt"></i>
+          </button>
+        </div>
+      </div>
     </div>
+
+    <!-- Conteúdo Principal -->
+    <div class="flex-1 flex flex-col overflow-y-auto">
+      <!-- Topbar -->
+      <div class="md:hidden bg-sidebar text-white p-4 flex items-center justify-between">
+        <div class="topbar__logo-icon">
+        <i class="fas fa-chart-line"></i>
+      </div>
+        <h1 class="font-playfair text-lg font-bold">Painel</h1>
+        <button (click)="isSidebarOpen = true">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+
+      <!-- Conteúdo -->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>
