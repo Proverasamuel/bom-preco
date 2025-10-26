@@ -73,12 +73,6 @@ export const routes: Routes = [
             title: 'Todos os produtos'
           },
           {
-            path: 'adicionar',
-            loadComponent: () =>
-              import('./pages/admin/produtos/add/add.component').then(m => m.AddComponent),
-            title: 'Adicionar produto'
-          },
-          {
             path: 'categorias',
             loadComponent: () =>
               import('./pages/admin/produtos/categorias/categorias.component').then(m => m.CategoriasComponent),

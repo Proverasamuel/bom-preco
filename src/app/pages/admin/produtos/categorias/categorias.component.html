@@ -6,10 +6,13 @@
         <div id="categorias" class="page-content">
           <div class="flex justify-between items-center mb-6">
             <h3 class="text-2xl font-bold text-dark">Categorias</h3>
-            <button class="bg-primary hover:bg-primary-dark text-dark font-bold py-2 px-4 rounded-lg transition-colors duration-300 flex items-center">
-              <i class="fas fa-plus mr-2"></i>
-              Nova Categoria
-            </button>
+            <button
+    (click)="abrirModalCategoria()"
+    class="bg-primary hover:bg-primary-dark text-dark font-bold py-2 px-4 rounded-lg transition-colors duration-300 flex items-center"
+  >
+    <i class="fas fa-plus mr-2"></i>
+    Nova Categoria
+  </button>
           </div>
           
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -133,5 +136,84 @@
               </div>
             </div>
           </div>
+          <!-- Modal Categoria -->
+<div
+  *ngIf="mostrarModalCategoria"
+  class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 transition-opacity duration-300"
+  @fadeAnimation
+>
+  <div
+    class="bg-white rounded-2xl shadow-lg p-8 w-full max-w-lg relative animate-fadeIn"
+  >
+    <h3 class="text-2xl font-bold text-dark mb-6">Nova Categoria</h3>
+
+    <form class="space-y-6">
+      <!-- Nome -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Nome da Categoria *</label>
+        <input
+          type="text"
+          placeholder="Ex: Relógios"
+          class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary"
+        />
+      </div>
+
+      <!-- Descrição -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Descrição</label>
+        <textarea
+          rows="3"
+          placeholder="Descreva a categoria..."
+          class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary"
+        ></textarea>
+      </div>
+
+      <!-- Status -->
+      <div>
+        <h4 class="text-lg font-bold text-dark mb-2">Status</h4>
+        <div class="flex items-center space-x-4">
+          <div class="flex items-center">
+            <input
+              type="radio"
+              id="status-ativa"
+              name="status"
+              class="w-4 h-4 text-primary border-gray-300 focus:ring-primary"
+              checked
+            />
+            <label for="status-ativa" class="ml-2 text-gray-700">Ativa</label>
+          </div>
+          <div class="flex items-center">
+            <input
+              type="radio"
+              id="status-inativa"
+              name="status"
+              class="w-4 h-4 text-primary border-gray-300 focus:ring-primary"
+            />
+            <label for="status-inativa" class="ml-2 text-gray-700">Inativa</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botões -->
+      <div class="flex justify-end space-x-4 pt-4">
+        <button
+          type="button"
+          (click)="fecharModalCategoria()"
+          class="bg-gray-200 hover:bg-gray-300 text-dark font-bold py-2 px-6 rounded-lg transition-colors duration-300"
+        >
+          Cancelar
+        </button>
+        <button
+          type="submit"
+          class="bg-primary hover:bg-primary-dark text-dark font-bold py-2 px-6 rounded-lg transition-colors duration-300 flex items-center"
+        >
+          <i class="fas fa-save mr-2"></i>
+          Salvar Categoria
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
         </div>
         </main>
